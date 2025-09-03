@@ -33,7 +33,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Je website
 
 <details open>
-  <summary>De website die ik zal namaken is van DeLamar. Ik zal hierbij de thuispagina en zakelijke pagina recreeeren, waarbij mij focus zal liggen op de surface plane.</summary>
+  <summary>De website die ik zal namaken is van DeLaMar. Ik zal hierbij de thuispagina en zakelijke pagina recreeeren, waarbij mij focus zal liggen op de surface plane.</summary>
 
   ### Je opdracht:
   <url src="https://delamar.nl/">
