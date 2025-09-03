@@ -58,6 +58,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  
+  screenreader
+  - De website heeft een sematisch correcte opbouw met header,main,footer etcetera. Hierdoor worden de headings ook goed en op een logische wijze opgelezen door de screenreader.
+  - Bij sommige teksten is het niet goed aangegeven in de HTML dat het nederlandse taal is, waardoor de screenreader in het engels blijft praten, dit is moeilijk te verstaan.
+  - De alt teksten bij de foto's zijn niet altijd zo duidelijk, ze zeggen niet genoeg over wat er te zien is op de foto.
+  - De carousels die vaak gebruikt worden op de website zijn niet goed toegankelijk voor de screenreader, de screenreader leest niet de nieuwe info op wanneer de carousel naar het volgende plaatje schuift. Hierdoor mist de gebruiker informatie.
+  - De links worden wel goed opgelezen, maar zijn niet altijd duidelijk waar ze bij horen. Dit kan verwarrend worden voor de gebruiker.
+  
+  WCAG
+  
+    
 
 </details>
 
