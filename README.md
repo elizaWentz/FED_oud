@@ -73,7 +73,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/lowcontrast.png" width="375px" alt="laag contrast voorbeeld">
   - er is geen optie om de carousel op pauze te zetten
   - geen optie voor prefers-reduced-motion
-  - De website was nog goed te lezen voor mensen die kleurenblind zijn
+  - de website was nog goed te lezen voor mensen die kleurenblind zijn
   <img src="readme-images/kleurenblind.png" width="375px" alt="Kleurenblind voorbeeld">
     
 
