@@ -67,7 +67,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - De links worden wel goed opgelezen, maar zijn niet altijd duidelijk waar ze bij horen. Dit kan verwarrend worden voor de gebruiker.
   
   WCAG
-  - niet elke link is aangegeven met een <a>
   - er is geen skip link aanwezig
   - De webiste heeft geen ondersteuning voor dark mode of hoog contrast
   - er is geen optie om de carousel op pauze te zetten
