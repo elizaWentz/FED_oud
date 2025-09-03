@@ -16,7 +16,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+  Eliza Wentzel
 
   #### Je startniveau:
   rood (kies uit zwart, rood óf blauw)
@@ -33,10 +33,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Je website
 
 <details open>
-  <summary>uitwerken voor kick-off werkgroep</summary>
+  <summary>De website die ik zal namaken is van DeLamar. Ik zal hierbij de thuispagina en zakelijke pagina recreeeren, waarbij mij focus zal liggen op de surface plane.</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  <url src="https://delamar.nl/">
+  <url src="https://delamar.nl/zakelijk/">
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
