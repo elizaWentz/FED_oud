@@ -69,11 +69,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   WCAG
   - er is geen skip link aanwezig
   - De website heeft geen ondersteuning voor dark mode of hoog contrast
-  <img src="readme-images/darkmode.png" width="375px" alt="Darkmode voorbeeld">
-  <img src="readme-images/lowcontrast.png" width="375px" alt="laag contrast voorbeeld">
+<img src="readme-images/darkmode.png" width="375px" alt="Darkmode voorbeeld">
+<img src="readme-images/lowcontrast.png" width="375px" alt="laag contrast voorbeeld">
+  
   - er is geen optie om de carousel op pauze te zetten
   - geen optie voor prefers-reduced-motion
   - de website was nog goed te lezen voor mensen die kleurenblind zijn
+  
   <img src="readme-images/kleurenblind.png" width="375px" alt="Kleurenblind voorbeeld">
     
 
