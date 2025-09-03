@@ -41,11 +41,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
-  <img src="images/thuispagina.png" width="375px" alt="Het theater in hartje Amsterdam">
+  <img src="readme-images/thuispagina.png" width="375px" alt="Het theater in hartje Amsterdam">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="images/zakelijkpagina.png" width="375px" alt="Unieke evenementlocatie in hartje Amsterdam">
+  <img src="readme-images/zakelijkpagina.png" width="375px" alt="Unieke evenementlocatie in hartje Amsterdam">
  
 </details>
 
@@ -69,12 +69,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   WCAG
   - er is geen skip link aanwezig
   - De website heeft geen ondersteuning voor dark mode of hoog contrast
-  <img src="images/darkmode.png" width="375px" alt="Darkmode voorbeeld">
-  <img src="images/lowcontrast.png" width="375px" alt="laag contrast voorbeeld">
+  <img src="readme-images/darkmode.png" width="375px" alt="Darkmode voorbeeld">
+  <img src="readme-images/lowcontrast.png" width="375px" alt="laag contrast voorbeeld">
   - er is geen optie om de carousel op pauze te zetten
   - geen optie voor prefers-reduced-motion
   - De website was nog goed te lezen voor mensen die kleurenblind zijn
-  <img src="images/kleurenblind.png" width="375px" alt="Kleurenblind voorbeeld">
+  <img src="readme-images/kleurenblind.png" width="375px" alt="Kleurenblind voorbeeld">
     
 
 </details>
