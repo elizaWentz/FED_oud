@@ -5,10 +5,14 @@
   box-sizing:border-box;  
 }
 
+*{
+  margin:0;
+  padding: 0;
+}
 
-
-
-
+html{
+  font-size:16px;
+}
 
 /*********************/
 /* CUSTOM PROPERTIES */
@@ -17,15 +21,109 @@
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
+  --nav-height: 6.8rem;
 }
 
 
+html{
+  display:block;
+}
 
+body{
+  display: block;
+	background-color:#eee;
+  font-family: "Montserrat";
+  
+}
 
+@font-face
+{
+    font-family: 'pressstart2p';
+    src: url('../css/fonts/Coco-Sharp-L-Bold.woff2');
+}
+@font-face
+{
+    font-family: 'pressstart2p';
+    src: url('../css/fonts/Coco-Sharp-L-Extrabold.woff2');
+}
 
-/****************/
-/* JOUW STYLING */
-/****************/
+header{
+  height: 4.2rem;
+  background-color:#111;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
 
-/* jouw code */
+}
+
+header a{
+  margin-top: 0.5em;
+  margin-left: 1em;
+  z-index: 4;
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  font-weight: 400;
+  margin-right: 1em;
+}
+
+header nav a img{
+  width: 20px;
+  
+  
+}
+
+.main_navigation{
+  display:flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 1em;
+  align-items: center;
+}
+
+li a{
+  color:white;
+  font-weight: 100;
+  font-size: 0.7rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+
+}
+
+@media (max-width:38em) {header  a img{
+  width: 76px;
+}}
+
+main figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.slideshow-container {
+  position: relative; /* makes positioning inside it possible */
+  width: 100%;
+  margin: 0;
+}
+
+.slideshow-text {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: magenta;
+  padding: 0.5em;
+  font-size: 1rem;
+  font-weight: bold;
+}
 
