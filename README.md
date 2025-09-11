@@ -110,7 +110,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  Goed:
+  Nog niet zoveel is goed gegaan.
+  
+  Lastig:
+  Het opzetten van de website ging lastig voor mij. Ik moest heel erg weer inkomen met coderen. Ik kreeg de breedte van het scherm niet goed, maar na hulp te vragen was het mij wel gelukt. 
+  Ik kwam er ook jammer genoeg achter dat ik een te moeilijke website heb gekozen. Hierdoor duurt het voor mij heel lang om de website op te bouwen. Ik zal niet van website switchen maar wel de website iets versimpelen zodat ik het binnen de tijd die we hebben wel af kan krijgen.
 
   ### Agenda voor meeting
   samen met je groepje opstellen
