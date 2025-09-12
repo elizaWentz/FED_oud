@@ -19,19 +19,19 @@
 <body>
 	<header>
 		<a href="/" aria-label="Naar thuis pagina">
-			<img src="images/delamar-logo.svg" alt="logo van DeLaMar" viewBox="0 0 500 491">
+			<img src="images/delamar-logo.svg" alt="logo van DeLaMar">
 		</a>
 
 		<nav>
 			<ul class="main_navigation">
 				<li>
-					<a href="index.html"><img src="images/icoon-agenda.svg"> Agenda </a>
+					<a href="index.html"><img src="images/icoon-agenda.svg" alt="agenda icoon"> Agenda </a>
 				</li>
 				<li>
-					<a href="index.html"><img src="images/icoon-zoek-wit.svg"> zoeken</a>
+					<a href="index.html"><img src="images/icoon-zoek-wit.svg" alt="zoek icoon"> zoeken</a>
 				</li>
 				<li>
-					<a href="index.html"><img src="images/icoon-hamburger.svg"> menu</a>
+					<a href="index.html"><img src="images/icoon-hamburger.svg" alt="hamburger menu"> menu</a>
 				</li>
 			</ul>
 
@@ -51,25 +51,162 @@
 			<img id="slideshow" src="images/homepage/main-1-mobile.jpg" alt="Musical Malle Balle">
 			<figcaption class="slideshow-text">Musical</figcaption>
 		</figure>
+
 		
-	</main>
-		<h2>
-			Malle Balle
-		</h2>
-		<h3>
-			De Rob de Nijs Musical
-		</h3>
-		<button>
-			<p>Meer informatie</p>
-		</button>
+
+		<section >
+			<h2>
+				Malle Babbe
+			</h2>
+			<h3>
+				De Rob de Nijs Musical
+			</h3>
+			<link href="#">
+				<a>Meer informatie</a>
+			</link>
+		</section>
 		
 	</main>
 
-	<section>
-		<input type = "search" placeholder="Zoek jouw voorstelling of artiest">
-		<input type="submit">
+	<section class="zoek">
+		<form>
+			<input type = "search" placeholder="Zoek jouw voorstelling of artiest" >
+			<img width="20" src="images/icoon-zoek.svg" alt="zoek icoon" aria-hidden="true">
+		</form>
+		
+		<h3> Of kies je favoriete genre</h3>
+
+		<ul>
+			<li>
+				<button>
+					Musical
+				</button>
+			</li>
+			<li>
+				<button>
+					Toneel
+				</button>
+			</li>
+			<li>
+				<button>
+					Muziektheater
+				</button>
+			</li>
+			<li>
+				<button>
+					Cabaret
+				</button>
+			</li>
+			<li>
+				<button>
+					Jeugd
+				</button>
+			</li>
+			<li>
+				<button>
+					Dans
+				</button>
+			</li>
+			<li>
+				<button>
+					Specials
+				</button>
+			</li>
+			<li>
+				<button>
+					Concert
+				</button>
+			</li>
+			<li>
+				<button>
+					Show
+				</button>
+			</li>
+		</ul>
 	</section>
 
+	<section class="voorstellingen">
+		<h2> 
+			Onze voorstellingen
+		</h2>
+
+		<ul>
+			<li>
+				<button class="filter-button active">
+					Populair
+				</button>
+			</li>
+			<li>
+				<button class="filter-button">
+					nu te zien
+				</button>
+			</li>
+		</ul>
+
+		<article class="malle-babbe">
+			<figure>
+				<img src="images/homepage/main-1-desktop.jpg" alt="Malle babbe de musical">
+				<figcaption class="slideshow-text">Musical</figcaption>
+			</figure>
+			
+			<h3>
+				Malle Babbe
+			</h3>
+			<P>
+				de rob de Nijs musical
+			</P>
+			<time>
+				vandaag t/m zo 21 sep
+			</time>
+		</article>
+		<article class="plien-bianca">
+			<figure>
+				<img src="images/homepage/plien-bianca.jpg" alt="Malle babbe de musical">
+				<figcaption class="slideshow-text">Musical</figcaption>
+			</figure>
+			
+			<h3>
+				Plien & Bianca
+			</h3>
+			<P>
+				Harrekidee!
+			</P>
+			<time>
+				wo 01 okt t/m zo 12 okt
+			</time>
+		</article>
+		
+		<article class="laan-woe">
+			<figure>
+				<img src="images/homepage/van-der-laan-woe.jpg" alt="Malle babbe de musical">
+				<figcaption class="slideshow-text">Musical</figcaption>
+			</figure>
+		
+			<h3>
+			Van der laan & Woe
+			</h3>
+			<P>
+			Dinsdagmiddag
+			</P>
+			<time>
+			do 18 jun 2026 t/m 27 jun 2026
+			</time>
+		</article>
+		
+		<link href="#">
+			<a>meer voorstellingen <img src="images/icoon-pijl-zwart.svg" alt="zwarte pijl naar rechts" aria-hidden="true"></a>
+		</link>
+
+		
+		
+	</section>
+
+	<section class="cabaret">
+		<img src="images/homepage/musical-cabaret.jpg" alt="Portret Chantal Janzen en Daria Bukvić">
+
+	</section>
+
+	<script defer src="scripts/script.js"></script>
 </body>
 	
 </html>
