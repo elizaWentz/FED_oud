@@ -18,7 +18,7 @@
 
 <body>
 	<header>
-		<a href="/" aria-label="Naar thuis pagina">
+		<a href="#" aria-label="Naar thuis pagina">
 			<img src="images/delamar-logo.svg" alt="logo van DeLaMar">
 		</a>
 
@@ -47,7 +47,7 @@
 
 	<main>
 
-		<figure class="slideshow-container" aria-live="polite">
+		<figure class="slideshow-container" id="zoom-afbeelding" aria-live="polite">
 			<img id="slideshow" src="images/homepage/main-1-mobile.jpg" alt="Musical Malle Balle">
 			<figcaption class="slideshow-text">Musical</figcaption>
 		</figure>
@@ -58,12 +58,13 @@
 			<h2>
 				Malle Babbe
 			</h2>
-			<h3>
+			<p>
 				De Rob de Nijs Musical
-			</h3>
-			<link href="#">
-				<a>Meer informatie</a>
-			</link>
+			</p>
+			<a href="#">
+				Meer informatie
+				<img src="images/icoon-pijl-wit.svg" alt="witte pijl naar rechts" aria-hidden="true">
+			</a>
 		</section>
 		
 	</main>
@@ -144,7 +145,7 @@
 		</ul>
 
 		<article class="malle-babbe">
-			<figure>
+			<figure class="slideshow-container">
 				<img src="images/homepage/main-1-desktop.jpg" alt="Malle babbe de musical">
 				<figcaption class="slideshow-text">Musical</figcaption>
 			</figure>
@@ -160,9 +161,9 @@
 			</time>
 		</article>
 		<article class="plien-bianca">
-			<figure>
+			<figure class="slideshow-container">
 				<img src="images/homepage/plien-bianca.jpg" alt="Malle babbe de musical">
-				<figcaption class="slideshow-text">Musical</figcaption>
+				<figcaption class="slideshow-text">Cabaret</figcaption>
 			</figure>
 			
 			<h3>
@@ -177,9 +178,9 @@
 		</article>
 		
 		<article class="laan-woe">
-			<figure>
+			<figure class="slideshow-container">
 				<img src="images/homepage/van-der-laan-woe.jpg" alt="Malle babbe de musical">
-				<figcaption class="slideshow-text">Musical</figcaption>
+				<figcaption class="slideshow-text">Cabaret</figcaption>
 			</figure>
 		
 			<h3>
@@ -193,9 +194,10 @@
 			</time>
 		</article>
 		
-		<link href="#">
-			<a>meer voorstellingen <img src="images/icoon-pijl-zwart.svg" alt="zwarte pijl naar rechts" aria-hidden="true"></a>
-		</link>
+		<a href="#">
+			Alle voorstellingen 
+			<img src="images/icoon-pijl-zwart.svg" alt="zwarte pijl naar rechts" aria-hidden="true">
+		</a>
 
 		
 		
@@ -203,8 +205,241 @@
 
 	<section class="cabaret">
 		<img src="images/homepage/musical-cabaret.jpg" alt="Portret Chantal Janzen en Daria Bukvić">
+		<h3>
+			De musicalklassieker Cabaret komt exclusief naar DeLaMar! 
+		</h3>
+		<p>
+			Niemand minder dan Chantal Janzen vertolkt hierin de iconische rol van Sally Bowles, 
+			waarmee ze na 10 jaar terugkeert naar het theater. De voorstelling wordt geregisseerd door Daria Bukvić, 
+			die hiervoor een uitstap maakt van haar functie als artistiek directeur bij Theater Oostpool. Zij zal een nieuwe, 
+			grootschalige bewerking van 
+		</p>
+
+		<a href="#">
+			Meer info 
+			<img src="images/icoon-pijl-zwart.svg" alt="zwarte pijl naar rechts" aria-hidden="true">
+		</a>
 
 	</section>
+
+	<section class="achter-de-schermen">
+		<h2>
+			Achter de schermen
+		</h2>
+
+		<article class="video-card">
+			<figure class="video-placeholder" data-video-id="https://www.youtube.com/watch?v=bBopylxxq4A&t=2s&ab_channel=AVROTROS">
+				<img src="images/homepage/hairspray-mobile.png" alt="Hairspray The Kick Off 2025" width="375" height="282">
+				<button class="play-button" aria-label="Video afspelen">
+					<img src="images/icoon-playbutton.svg">
+				</button>
+    			<button class="info-button" aria-label="Meer informatie over deze video">
+      				<img src="images/icoon-info.svg" alt="">
+				</button>
+				<h3 class="video-caption">
+					<span>Optreden Hairspray | Musical</span> 
+					<span>Awards: The Kick-Off 2025</span>
+				</h3>
+			</figure>
+		</article>
+
+		<article class="video-card">
+			<figure class="video-placeholder" data-video-id="https://www.youtube.com/watch?v=Xgi8UipB59I&t=2s&ab_channel=AVROTROS">
+				<img src="images/homepage/stoornis-of-my-life-mobile.png" alt="Stoornis of my life the kick off 2025" width="375" height="282">
+				<button class="play-button" aria-label="Video afspelen">
+					<img src="images/icoon-playbutton.svg">
+				</button>
+    			<button class="info-button" aria-label="Meer informatie over deze video">
+      				<img src="images/icoon-info.svg" alt="">
+				</button>
+				<h3 class="video-caption">
+					<span>Optreden Stoornis of my Life |</span> 
+					<span>Musical Awards: The Kick-Off 2025</span>
+				</h3>
+			</figure>
+		</article>
+
+		<article class="video-card">
+			<figure class="video-placeholder" data-video-id="https://www.youtube.com/watch?v=IsV0j83qgrs&t=1s&ab_channel=AVROTROS">
+				<img src="images/homepage/foxtrot-mobile.png" alt="Foxtrot kick off 2025" width="375" height="282">
+				<button class="play-button" aria-label="Video afspelen">
+					<img src="images/icoon-playbutton.svg">
+				</button>
+    			<button class="info-button" aria-label="Meer informatie over deze video">
+      				<img src="images/icoon-info.svg" alt="">
+				</button>
+				<h3 class="video-caption">
+					<span>Optreden Foxtrot | Musical </span> 
+					<span>Awards: The Kick-Off 2025</span>
+				</h3>
+			</figure>
+		</article>
+
+		<a href="#">
+			Toon meer
+			<img src="images/icoon-dropdown.svg" alt="zwarte pijl naar rechts" aria-hidden="true">
+		</a>
+
+		<a href="#">
+			Bekijk meer
+			<img src="images/icoon-pijl-wit.svg" alt="zwarte pijl naar rechts" aria-hidden="true">
+		</a>
+	</section>
+
+	<section class="rating">
+		<h3>
+			Wat vinden andere bezoekers van DeLaMar
+		</h3>
+
+		<div class="rating-box"> 
+			<figure >
+				<figcaption>
+				  4,3/5
+				</figcaption>
+			
+				<p aria-label="Beoordeling: 4,3 van 5 sterren">
+					<img src="images/homepage/full-star-rating.svg" alt="ster">
+					<img src="images/homepage/full-star-rating.svg" alt="ster">
+					<img src="images/homepage/full-star-rating.svg" alt="ster">
+					<img src="images/homepage/full-star-rating.svg" alt="ster">
+					<img src="images/homepage/half-star-rating.svg" alt="ster">
+				</p>
+			</figure>
+
+			<p>
+				uit <strong>15514 beoordelingen</strong> van onze bezoekers
+			</p>
+		</div>
+		
+			
+	</section>
+
+	<section class="social-media">
+		<h2>
+			Volg ons op social media!
+		</h2>
+
+		<figure>
+			<img src="images/icoon-facebook.svg" alt="Facebook logo">
+			<img src="images/icoon-instagram.svg" alt="Instagram logo">
+			<img src="images/icoon-youtube.svg" alt="Youtube logo">
+			<img src="images/icoon-tiktok.svg" alt="Tiktok logo">
+		</figure>
+	</section>
+
+	<section class="nieuwsbrief">
+		<h2>
+			<span>
+				Onze nieuwsbrief
+			</span> 
+			<span>
+				ontvangen?
+			</span>
+		</h2>
+		<p>
+			Twee keer per maand als eerste op de hoogte van nieuwe voorstellingen en aanbiedingen?
+		</p>
+
+		<form>
+			<input type = "email" placeholder="Je e-mailadres" >
+			<input type="submit" value="Inschrijven">
+		</form>
+		<small>
+			lees onze
+			<a href="#">
+				privacy- en cookieverklaring
+			</a>
+		</small>
+	</section>
+
+	<footer>
+		<p>
+			Marnixstraat 402
+
+			<a href="#">
+				Mail ons
+			</a>
+			<a href="#">
+				Bel ons
+			</a>
+			<small>
+				van 11:00 tot 20:00 uur
+			</small>
+		</p>
+
+		<details>
+			<summary>
+				Handige links
+				<img src="images/icoon-dropdown.svg" alt="dropdown icoon">
+			</summary>
+			<ul>
+				<li>
+					<a href="#">Bereikbaarheid</a>
+				</li>
+				<li>
+					<a href="#" target="_blank" rel="noopener">Contact</a>
+				</li>
+				<li>
+					<a href="#">Veelgestelde vragen</a>
+				</li>
+				<li>
+					<a href="#" target="_blank" rel="noopener">Inloggen</a>
+				</li>
+				<li>
+					<a href="#">Technische gegevens</a>
+				</li>
+			</ul>
+		</details>
+
+		<details>
+			<summary>
+				Zakelijk verhuur
+				<img src="images/icoon-dropdown.svg" alt="dropdown icoon">
+			</summary>
+			<ul>
+				<li>
+					<a href="#">Bereikbaarheid</a>
+				</li>
+				<li>
+					<a href="#">Contact</a>
+				</li>
+				<li>
+					<a href="#">Ruimtes</a>
+				</li>
+				<li>
+					<a href="#">Mogelijkheden</a>
+				</li>
+				<li>
+					<a href="#">Faciliteiten</a>
+				</li>
+			</ul>
+
+		</details>
+
+		<section>
+			<img src="images/delamar-logo.svg" alt="delamar logo">
+			<p> 
+				DeLaMar is een initiatief van de VandenEnde Foundation
+			</p>
+		</section>
+		<section>
+			<img src="images/privacy-verified.png" alt=" privacy verified logo">
+			<img src="images/green-key-logo-goud.jpg" alt=" green key logo">
+		</section>
+		<section>
+			<p>
+				veilig betalen met
+			</p>
+			<section class="betaling-opties">
+				<img src="images/logo-ideal.svg" alt="ideal logo">
+				<img src="images/logo-mastercard.svg" alt="mastercard logo">
+				<img src="images/logo-visa.svg" alt="visa logo">
+				<img src="images/logo-ideal.svg" alt="ideal logo">
+			</section>
+		</section>
+		
+		
+	</footer>
 
 	<script defer src="scripts/script.js"></script>
 </body>
