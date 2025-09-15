@@ -21,7 +21,10 @@ html{
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
-  --nav-height: 6.8rem;
+  --gradient1: linear-gradient(-45deg, #ff8001 -1.08%, #f80080 46.24%, #661f80 101%);
+  --gradient2: linear-gradient(-45deg, #ffe000 -2.05%, #ff8001 49.66%, #f80080 103.56%);
+  --gradient3: linear-gradient(-45deg, #e71f80 -0.84%, #86368c 48.07%, #009fe3 101.23%);
+  --gradient4: linear-gradient(-45deg, #a2c617 -0.81%, #00A97d 48.85%, #009fe3 100.62%);
 }
 
 
@@ -31,19 +34,20 @@ html{
 
 body{
   display: block;
-	background-color:#eee;
+	background-color: var(--color-background);
   font-family: "Montserrat";
+  line-height: 2em;
   
 }
 
 @font-face
 {
-    font-family: 'pressstart2p';
+    font-family: 'coco-sharp-bold';
     src: url('../css/fonts/Coco-Sharp-L-Bold.woff2');
 }
 @font-face
 {
-    font-family: 'pressstart2p';
+    font-family: 'coco-sharp-extrabold';
     src: url('../css/fonts/Coco-Sharp-L-Extrabold.woff2');
 }
 
@@ -56,14 +60,23 @@ header{
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  position: fixed;
+  z-index: 10;
   width: 100%;
+  
 
 }
 
 header a{
   margin-top: 0.5em;
   margin-left: 1em;
-  z-index: 4;
+  z-index: 10;
+}
+
+a{
+  text-decoration: none;
+  color:black;
+  font-size: 1em;
 }
 
 nav{
@@ -73,10 +86,8 @@ nav{
   margin-right: 1em;
 }
 
-header nav a img{
-  width: 20px;
-  
-  
+.main_navigation a img{
+  width: 19px;
 }
 
 .main_navigation{
@@ -85,17 +96,20 @@ header nav a img{
   list-style: none;
   gap: 1em;
   align-items: center;
+
 }
 
-li a{
+.main_navigation li a{
   color:white;
   font-weight: 100;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
+  text-transform:uppercase;
   text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5em;
+  padding-top: 1em;
+  gap: 0;
 
 }
 
@@ -109,6 +123,18 @@ main figure img {
   display: block;
 }
 
+#zoom-afbeelding{
+  overflow: hidden;
+}
+
+#zoom-afbeelding img {
+  transition: transform 5s ease;
+}
+
+#zoom-afbeelding:hover img {
+  transform: scale(1.1);
+}
+
 .slideshow-container {
   position: relative; /* makes positioning inside it possible */
   width: 100%;
@@ -120,10 +146,509 @@ main figure img {
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
-  background-color: white;
-  color: magenta;
-  padding: 0.5em;
+  background-color: var(--color-background);
+  color: #e71f80;
+  padding: 0 0.5em;
   font-size: 1rem;
   font-weight: bold;
 }
+
+main section{
+  height: 300px;
+  padding: 3rem 1.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+
+  background-color: #e71f80;
+  background-image: var(--gradient1);
+
+  
+}
+
+main section h2{
+  font-size: 1.5em;
+  padding: 0 0.4em;
+  color: #e71f80;
+  background-color: var(--color-background);
+}
+
+main section p{
+  padding: 0 0.5em;
+  font-weight: 800;
+  font-size: 0.8em;
+  color: #e71f80;
+  background-color: var(--color-background);
+}
+
+main a, .cabaret a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 0.4em 1em;
+
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+
+  font-weight: 700;
+  border-radius: 0.4em;
+  cursor: pointer;
+}
+
+.zoek{
+  background-color: var(--color-background);;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  padding:1em 0;
+}
+
+.zoek form{
+  position: relative;
+  width: 100%;
+  max-width: 375px;
+  margin: 1rem auto;
+}
+
+.zoek input{
+  background-color: #E7E7E7;
+  border: none;
+  width: 330px;
+  font-size: 1em;
+  line-height: 1.8rem;
+  border-radius: 0.2em;
+  padding: 0.7rem 0.7rem 0.7rem;
+  margin: 0 1em;
+}
+
+.zoek img{
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.2rem;
+  pointer-events: none;
+}
+.zoek h3{
+  font-size: 1.3em;
+  margin: 0.3em 1em;
+}
+
+.zoek ul{
+  margin-top: 0.4em;
+  margin-left: 1em;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  list-style: none;
+  overflow-x: auto;
+}
+
+.zoek button{
+  padding: 0.4em;
+  margin-bottom: 1em;
+  font-size: 1em;
+  font-weight:bold;
+  background-color: #661f80;
+  color: white;
+  border-radius: 0.3em;
+  border: none;
+}
+
+.voorstellingen{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0;
+  
+}
+.voorstellingen ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  margin: 1em;
+  
+}
+
+
+.filter-button {
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+  padding: 0.4em 1em;
+  border-radius: 0.3em;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.filter-button.active {
+  background-color: black;
+  color: white;
+}
+
+.voorstellingen article img{
+  width:343px;
+  border: 6px solid transparent; /* Required for border-image */
+  
+}
+
+.voorstellingen article, .cabaret{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  background-color: var(--color-background);
+  height:auto;
+}
+.voorstellingen article{
+  margin-bottom: 0.7em;
+}
+
+article h3{
+  color: white;
+  padding: 0.2em;
+}
+article p{
+  font-size: 0.8em;
+}
+
+article time{
+  font-size: 0.8em;
+  font-weight: 700;
+  background-color: #E7E7E7;
+  padding: 0.5em;
+  margin-bottom: 2em;
+}
+
+.malle-babbe h3{
+  background-image: var(--gradient1);
+}
+.malle-babbe img{
+  background-image: var(--gradient1);
+}
+
+.malle-babbe time{
+  color: #f80080;
+}
+
+.plien-bianca img{
+  background-image: var(--gradient2);
+}
+.plien-bianca h3{
+  background-image: var(--gradient2);
+}
+.plien-bianca time{
+  color: #ff8001;
+}
+
+.laan-woe img{
+  background-image: var(--gradient3);
+}
+
+.laan-woe h3{
+  background-image: var(--gradient3);
+}
+
+.laan-woe{
+  color: #86368c;
+}
+
+.voorstellingen a{
+  margin-top: 1em;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+.voorstellingen .slideshow-text {
+  padding: 0 0.6em;
+  margin-bottom: 0.6em;
+  font-size: 0.7em;
+  font-weight: 800;
+}
+
+.cabaret{
+  background-color: white;
+  padding: 3em 0.9em;
+}
+
+.cabaret>img:first-of-type{
+  width:343px;
+  border: 4px solid transparent; /* nodig voor border-image */
+  background-image: var(--gradient3);
+}
+
+.cabaret h3{
+  font-weight: 750;
+  font-size: 1.2em;
+}
+.cabaret p{
+  font-weight: 350;
+  font-size: 0.9em;
+}
+
+.cabaret a{
+  width: 343px;
+  padding: 0.75em 1em;
+  background-color: transparent;
+  color: black;
+  border-radius: 0.3em;
+}
+
+.achter-de-schermen{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding-top: 2.5em;
+  gap: 1.5em;
+
+}
+
+.video-placeholder {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.video-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.info-button {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.video-placeholder iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-caption {
+  position: absolute;
+  margin-left: 0.5em;
+  bottom: 0.8em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  z-index: 2;
+  padding-left: 0.5em
+}
+
+.video-caption span {
+  background: var(--gradient2);
+  color: white;
+}
+
+.achter-de-schermen a{
+  color: white;
+}
+
+.achter-de-schermen a:last-child{
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.rating, .social-media, .nieuwsbrief, footer {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  text-align: center;
+  padding: 2em 1em;
+}
+
+.rating h3 {
+  font-size: 1.4em;
+  font-weight: 800;
+  margin-bottom: 1.5em;
+}
+
+.rating-box {
+  background-color: #f1f1f1;
+  padding: 1em;
+  gap: 0.7em;
+}
+
+.rating-box figure, .social-media figure {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+}
+.rating-box figcaption {
+  font-size: 1.8em;
+  font-weight: 800;
+}
+
+
+.rating-box p:first-child{
+  display: flex;
+  gap: 0.2em;
+}
+
+.rating-box p:first-child img {
+  width: 1.4em;
+  height: 1.4em;
+}
+
+.rating-box p:last-child {
+  line-height: 1.4;
+
+}
+
+.reviews strong {
+  font-weight: 800;
+}
+
+.social-media{
+  background-color: black;
+  color: white;
+  height: 100%;
+  padding: 4em 0;
+  
+}
+
+.social-media figure img{
+  background-image: var(--gradient1);
+  padding: 0.5em;
+  margin-top: 1em;
+  border-radius: 0.5em;
+}
+
+.nieuwsbrief{
+  background-color: black;
+  color: white;
+  gap: 0.9em;
+}
+
+.nieuwsbrief p{
+  font-size: 0.9em;
+  line-height: 1.2em;
+}
+
+.nieuwsbrief span {
+  background: var(--gradient1);
+  color: white;
+}
+
+.nieuwsbrief form{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.nieuwsbrief input{
+  font-size: 1em;
+  line-height: 1.8rem;
+  border-radius: 0.2em;
+  padding: 0.7em 0.7rem 0.7rem;
+  width: 100%;
+  border: none;
+
+
+}
+
+.nieuwsbrief input:first-child{
+  width: 210%;
+  border-radius: 0;
+}
+.nieuwsbrief input:last-child{
+  border-radius: 0 0.3em 0.3em 0;
+  background-image: var(--gradient1);
+  color: white;
+  font-weight: bold;
+}
+
+.nieuwsbrief a, footer a {
+  font-weight: bold;
+  color: white;
+}
+
+.nieuwsbrief small{
+  font-size: 0.7em;
+}
+
+footer {
+  background-image: var(--gradient1);
+  color: white;
+}
+
+footer p{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 3em;
+}
+
+footer details{
+ width: 342px;
+ border-bottom: black;
+}
+
+footer summary{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10em;
+ 
+}
+
+footer summary img{
+  justify-content: end;
+}
+
+footer details ul{
+  list-style: none;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+
+
+
+
+
+
+
+
+
 
