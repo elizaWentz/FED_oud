@@ -154,6 +154,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  
   Goed:
   Het coderen van de code gaat vlot en soepel. Ik loop tegen weinig problemen aan gelukkig. Als ik ergens echt niet uitkom vraag ik het aan de docent of Chatgpt. Ik ben wel goed in CSS, ik vind dit ook leuk om te doen. Javascript heb ik zeker wel vaker een handje bij nodig.
 
