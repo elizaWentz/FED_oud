@@ -89,13 +89,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdown-thuis.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/breakdown-dynamisch2.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <p>
+    Dynamisch onderdeel: carrousel die je kan bedienen door middel van knoppen
+  </p>
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/breakdown-dynamisch2.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+   <p>
+     Dynamisch onderdeel: swipable menu voor genres
+  </p>
 
 </details>
 
@@ -111,7 +117,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
   Goed:
-  Nog niet zoveel is goed gegaan.
+  Het enige dat tot nu toe goed is gegaan is de html invoeren zodat alle info er alvast instaat. Dit helpt mij om daarna volledig te kunnen focussen op de css en javascript.
   
   Lastig:
   Het opzetten van de website ging lastig voor mij. Ik moest heel erg weer inkomen met coderen. Ik kreeg de breedte van het scherm niet goed, maar na hulp te vragen was het mij wel gelukt. 
@@ -130,10 +136,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - geen buttons gebruiken voor linkjes, hiervoor gebruik je <a>
+  - om een dropdown menu te maken kan je het beste <details> en <summary> gebruiken, door deze te gebruiken zal er vanzelf een dropdown menu gecreeërd worden
+  - read-me is duidelijk opgesteld en goed dat er plaatjes bij de wgac staan als voorbeeld.
+  - update goed je Github voor betere feedback
 
 </details>
 
@@ -148,6 +154,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Goed:
+  Het coderen van de code gaat vlot en soepel. Ik loop tegen weinig problemen aan gelukkig. Als ik ergens echt niet uitkom vraag ik het aan de docent of Chatgpt. Ik ben wel goed in CSS, ik vind dit ook leuk om te doen. Javascript heb ik zeker wel vaker een handje bij nodig.
+
+  Slecht: 
+  Javascript vind ik best lastig nog. Hier loop ik soms tegenaan als ik bijvoorbeeld een carrousel moet maken of ander dynamisch onderdeel. Maar met de docent en Chatgpt aan mijn zij kom ik er wel doorheen.
 
 
   ### Agenda voor meeting
