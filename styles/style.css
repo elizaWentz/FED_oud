@@ -87,7 +87,7 @@ nav{
 }
 
 .main_navigation a img{
-  width: 19px;
+  width: 20px;
 }
 
 .main_navigation{
@@ -118,6 +118,7 @@ nav{
 }}
 
 main figure img {
+  padding-top: 3em;
   width: 100%;
   height: auto;
   display: block;
@@ -163,8 +164,6 @@ main section{
 
   background-color: #e71f80;
   background-image: var(--gradient1);
-
-  
 }
 
 main section h2{
@@ -174,12 +173,37 @@ main section h2{
   background-color: var(--color-background);
 }
 
+
+
 main section p{
   padding: 0 0.5em;
   font-weight: 800;
   font-size: 0.8em;
   color: #e71f80;
   background-color: var(--color-background);
+}
+
+
+
+.zakelijk main section p,.zakelijk main small {
+  background-color: transparent;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.zakelijk main small{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.zakelijk main small a{
+  border:none;
+  background: none;
+
+
 }
 
 main a, .cabaret a{
@@ -199,8 +223,10 @@ main a, .cabaret a{
   cursor: pointer;
 }
 
+
+
 .zoek{
-  background-color: var(--color-background);;
+  background-color: var(--color-background);
   display:flex;
   justify-content: center;
   flex-direction: column;
@@ -306,7 +332,7 @@ main a, .cabaret a{
   flex-direction: column;
   gap: 1em;
   align-items: center;
-  background-color: var(--color-background);
+  background-color: white;
   height:auto;
 }
 .voorstellingen article{
@@ -317,6 +343,7 @@ article h3{
   color: white;
   padding: 0.2em;
 }
+
 article p{
   font-size: 0.8em;
 }
@@ -582,8 +609,6 @@ article time{
   padding: 0.7em 0.7rem 0.7rem;
   width: 100%;
   border: none;
-
-
 }
 
 .nieuwsbrief input:first-child{
@@ -609,9 +634,10 @@ article time{
 footer {
   background-image: var(--gradient1);
   color: white;
+  width: 100%;
 }
 
-footer p{
+footer section:first-of-type p{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -627,28 +653,79 @@ footer summary{
   list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  gap: 10em;
- 
+  justify-content: space-between;
 }
 
 footer summary img{
-  justify-content: end;
+  width: 1.2em;
+  height: auto;
 }
 
 footer details ul{
   list-style: none;
   justify-content: left;
   align-items: flex-start;
+ 
 }
 
+footer details{
+  padding: 1em 0.5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4); /* licht wit/transparant */
+  font-weight: 600;
+}
 
+footer details:first-of-type {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
 
+footer section nav{
+  display: flex;
+  flex-direction: column;
+}
 
+footer section:nth-of-type(2), footer section:nth-of-type(3){
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7em;
+  text-align: left;
+  line-height: 1.5;
+  gap: 2em;
+  padding: 1em;
+  margin: 2em 0;
+  
+}
 
+footer section:nth-of-type(3){
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 3em 0;
+}
+footer section:nth-of-type(3) img:last-child{
+  width: 20%;
+}
 
+footer section:nth-of-type(3) img:first-child{
+  width: 60%;
+}
 
+.betaling-opties{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1em;
+  flex-wrap: wrap;
+  width: 60%; 
+}
 
-
-
+footer section:nth-of-type(4){
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: 600;
+  margin: 2em 0;
+}
 
