@@ -92,7 +92,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/breakdown-thuis.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/breakdown-dynamisch2.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/breakdown-dynamisch1.jpg" width="375px" alt="breakdown van een dynamisch deel">
   <p>
     Dynamisch onderdeel: carrousel die je kan bedienen door middel van knoppen
   </p>
