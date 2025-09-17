@@ -267,9 +267,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg). 
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
-
-  1. bron 1
-  2. bron 2
-  3. ...
+  
+  1. Zoom effect, bron: ChatGPT - prompt:"Hoe creeër ik een zoom in effect op een img zoals bij delamar?"
+  2. Filterknoppen Javascript, bron: ChatGPT - prompt:"I want to have the first button stay a certain way, but the second needs to only have a black border and no background color and black letters instead of white. I want it to be able to switch back to the style of the first button when you click on it and that the first button will change to the no border etc. How will i achieve this?"
+  3. video-placeholder css, bron: ChatGPT - prompt: "I want to add multiple videos that have a playbutton in the middle en a information icon on de upper right, What is the best way to do this?"
+  4. carrousel, bron: https://codepen.io/shooft/pen/QwjQGZe
+  5. hamburger menu, bron: https://codepen.io/shooft/pen/myepoJo
 
 </details>
