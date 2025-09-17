@@ -138,6 +138,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   - geen buttons gebruiken voor linkjes, hiervoor gebruik je <a>
   - om een dropdown menu te maken kan je het beste <details> en <summary> gebruiken, door deze te gebruiken zal er vanzelf een dropdown menu gecreeërd worden
+  - het is niet zo gebruikelijk om alles in je main te zetten. Dit kan je beter alleen houden voor het belangrijkste van de pagina
   - read-me is duidelijk opgesteld en goed dat er plaatjes bij de wgac staan als voorbeeld.
   - update goed je Github voor betere feedback
 
