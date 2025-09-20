@@ -274,5 +274,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   4. carrousel, bron: https://codepen.io/shooft/pen/QwjQGZe
   5. hamburger menu, bron: https://codepen.io/shooft/pen/myepoJo
   6. Checkmark list-style, bron: https://stackoverflow.com/questions/34141950/how-to-use-tick-checkmark-symbol-instead-of-bullets-in-unordered-list
+     7. partners grid, bron: ChatGPT - prompt: "Ik krijg de groottes van de logo's niet gelijk, waardoor ze niet goed in de grid komen te staan, wat doe ik verkeerd?"
 
 </details>
