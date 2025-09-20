@@ -273,5 +273,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   3. video-placeholder css, bron: ChatGPT - prompt: "I want to add multiple videos that have a playbutton in the middle en a information icon on de upper right, What is the best way to do this?"
   4. carrousel, bron: https://codepen.io/shooft/pen/QwjQGZe
   5. hamburger menu, bron: https://codepen.io/shooft/pen/myepoJo
+  6. Checkmark list-style, bron: https://stackoverflow.com/questions/34141950/how-to-use-tick-checkmark-symbol-instead-of-bullets-in-unordered-list
 
 </details>
