@@ -19,8 +19,12 @@ html{
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--text-black:#111;
+  --text-white:  #fff;
+  --white: #fff;
+  --grey-light: #eeeeee;
+  --grey-dark: #9b9b9b;
+  --black:#111;
   --gradient1: linear-gradient(-45deg, #ff8001 -1.08%, #f80080 46.24%, #661f80 101%);
   --gradient2: linear-gradient(-45deg, #ffe000 -2.05%, #ff8001 49.66%, #f80080 103.56%);
   --gradient3: linear-gradient(-45deg, #e71f80 -0.84%, #86368c 48.07%, #009fe3 101.23%);
@@ -34,7 +38,7 @@ html{
 
 body{
   display: block;
-	background-color: var(--color-background);
+	background-color: var(--white);
   font-family: "Montserrat";
   line-height: 2em;
   
@@ -53,7 +57,7 @@ body{
 
 header{
   height: 4.2rem;
-  background-color:#111;
+  background-color:var(--black);
   top: 0;
   left: 0;
   width: 100%;
@@ -75,11 +79,11 @@ header a{
 
 a{
   text-decoration: none;
-  color:black;
+  color:var(--text-black);
   font-size: 1em;
 }
 
-nav{
+nav {
   display: flex;
   flex-direction: row;
   font-weight: 400;
@@ -99,8 +103,8 @@ nav{
 
 }
 
-.main_navigation li a{
-  color:white;
+.main_navigation li a, .zaal-iconen li{
+  color:var(--text-white);
   font-weight: 100;
   font-size: 0.6rem;
   text-transform:uppercase;
@@ -124,6 +128,8 @@ main figure img {
   display: block;
 }
 
+/* bron: ChatGPT */
+
 #zoom-afbeelding{
   overflow: hidden;
 }
@@ -137,7 +143,7 @@ main figure img {
 }
 
 .slideshow-container {
-  position: relative; /* makes positioning inside it possible */
+  position: relative;
   width: 100%;
   margin: 0;
 }
@@ -147,7 +153,7 @@ main figure img {
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--color-background);
+  background-color: var(--white);
   color: #e71f80;
   padding: 0 0.5em;
   font-size: 1rem;
@@ -170,7 +176,7 @@ main section h2{
   font-size: 1.5em;
   padding: 0 0.4em;
   color: #e71f80;
-  background-color: var(--color-background);
+  background-color: var(--white);
 }
 
 
@@ -180,14 +186,14 @@ main section p{
   font-weight: 800;
   font-size: 0.8em;
   color: #e71f80;
-  background-color: var(--color-background);
+  background-color: var(--white);
 }
 
 
 
-.zakelijk main section p,.zakelijk main small {
+.zakelijk main section p,.zakelijk main small, .referenties small {
   background-color: transparent;
-  color: white;
+  color: var(--text-white);
   font-weight: 400;
   text-align: center;
   line-height: 1.5em;
@@ -197,7 +203,10 @@ main section p{
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
+
+
 
 .zakelijk main small a{
   border:none;
@@ -206,7 +215,7 @@ main section p{
 
 }
 
-main a, .cabaret a{
+main a, .cabaret a, .zalen a, .referenties a{
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -214,8 +223,8 @@ main a, .cabaret a{
   padding: 0.4em 1em;
 
   border: 2px solid black;
-  background-color: black;
-  color: white;
+  background-color: var(--black);
+  color: var(--text-white);
   text-decoration: none;
 
   font-weight: 700;
@@ -226,7 +235,7 @@ main a, .cabaret a{
 
 
 .zoek{
-  background-color: var(--color-background);
+  background-color: var(--white);
   display:flex;
   justify-content: center;
   flex-direction: column;
@@ -241,7 +250,7 @@ main a, .cabaret a{
 }
 
 .zoek input{
-  background-color: #E7E7E7;
+  background-color: var(--grey-light);
   border: none;
   width: 330px;
   font-size: 1em;
@@ -280,33 +289,71 @@ main a, .cabaret a{
   font-size: 1em;
   font-weight:bold;
   background-color: #661f80;
-  color: white;
+  color: var(--text-white);
   border-radius: 0.3em;
   border: none;
 }
 
-.voorstellingen{
+.voorstellingen, .zalen, .we-bieden, .mogelijkheden, .referenties, .referenties li{
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   padding: 2em 0;
-  
 }
+
+.zalen{
+  padding: 2em 1em 1em 1em;
+}
+
+
 .voorstellingen ul{
   list-style: none;
   display: flex;
   flex-direction: row;
   gap: 0.5em;
   margin: 1em;
-  
+}
+
+.we-bieden{
+  background-color: var(--grey-light);
+}
+
+.zaal-iconen, .voorzieningen-lijst, .we-bieden ul{
+  gap: 1em;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 1em;
+  padding-bottom: 1.5em; 
+}
+
+
+
+.voorzieningen-lijst {
+  list-style: none;
+}
+
+/* bron: StackOverflow.com */
+.voorzieningen-lijst li:before {
+  content: '✓';
+  color: #7ED321;
+}
+
+.zalen .voorzieningen-lijst{
+  display: flex;
+  flex-direction: column;
+}
+
+.voorzieningen-lijst{
+  gap: 0.5em;
 }
 
 
 .filter-button {
   background-color: transparent;
-  border: 2px solid black;
-  color: black;
+  border: 2px solid;
+  color: var(--text-black);
   padding: 0.4em 1em;
   border-radius: 0.3em;
   font-size: 1em;
@@ -316,14 +363,17 @@ main a, .cabaret a{
 }
 
 .filter-button.active {
-  background-color: black;
-  color: white;
+  background-color: var(--black);
+  color: var(--text-white);
+}
+
+.voorstellingen{
+  background-color: var(--grey-light);
 }
 
 .voorstellingen article img{
   width:343px;
-  border: 6px solid transparent; /* Required for border-image */
-  
+  border: 6px solid transparent; /* Nodig voor border-image */ 
 }
 
 .voorstellingen article, .cabaret{
@@ -332,16 +382,73 @@ main a, .cabaret a{
   flex-direction: column;
   gap: 1em;
   align-items: center;
-  background-color: white;
+  background-color:var(--white);
   height:auto;
 }
-.voorstellingen article{
+
+.zalen-article{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1em;
+  align-items: flex-start;
+  height: auto;
+}
+
+.voorstellingen article, .zalen article{
   margin-bottom: 0.7em;
 }
 
+
+/*checken met border image slice */
+.zaal-inhoud{
+  border: 5px solid transparent;
+  border-image: var(--gradient3);
+  border-image-slice: 1;
+  overflow: hidden;
+  max-width: 360px;
+  margin: 1em 1em;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+}
+
+.zaal-inhoud h3{
+  font-size: 1.4em;
+  padding: 0.5em 0.5em;
+}
+.zaal-inhoud p{
+  font-size: 1em;
+  padding: 0 1em;
+}
+
+
 article h3{
-  color: white;
+  color: var(--text-white);
   padding: 0.2em;
+}
+
+.zalen article h3{
+  color: var(--text-blackwhite);
+}
+
+.zaal-iconen li{
+  color: var(--text-black);
+  font-weight: 600;
+  gap: 0.5em;
+  background-color: var(--grey-light);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.zaal-inhoud a{
+  margin: 1em;
+  font-size: 1.1em;
+}
+
+.zalen>a{
+  margin:0.5em;
 }
 
 article p{
@@ -351,7 +458,7 @@ article p{
 article time{
   font-size: 0.8em;
   font-weight: 700;
-  background-color: #E7E7E7;
+  background-color: var(--grey-light);
   padding: 0.5em;
   margin-bottom: 2em;
 }
@@ -395,7 +502,7 @@ article time{
   font-size: 0.9em;
 }
 
-.voorstellingen .slideshow-text {
+.voorstellingen .slideshow-text{
   padding: 0 0.6em;
   margin-bottom: 0.6em;
   font-size: 0.7em;
@@ -403,7 +510,6 @@ article time{
 }
 
 .cabaret{
-  background-color: white;
   padding: 3em 0.9em;
 }
 
@@ -422,23 +528,26 @@ article time{
   font-size: 0.9em;
 }
 
-.cabaret a{
-  width: 343px;
+.cabaret a, .zalen>a{
   padding: 0.75em 1em;
   background-color: transparent;
-  color: black;
+  color: var(--text-black);
   border-radius: 0.3em;
+}
+
+.cabaret a{
+  width: 343px;
+
 }
 
 .achter-de-schermen{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: black;
-  color: white;
+  background-color: var(--black);
+  color: var(--text-white);
   padding-top: 2.5em;
   gap: 1.5em;
-
 }
 
 .video-placeholder {
@@ -498,11 +607,11 @@ article time{
 
 .video-caption span {
   background: var(--gradient2);
-  color: white;
+  color: var(--text-white);
 }
 
 .achter-de-schermen a{
-  color: white;
+  color: var(--text-white);
 }
 
 .achter-de-schermen a:last-child{
@@ -515,7 +624,6 @@ article time{
 .rating, .social-media, .nieuwsbrief, footer {
   display: flex;
   flex-direction: column;
-  background-color: white;
   text-align: center;
   padding: 2em 1em;
 }
@@ -526,36 +634,36 @@ article time{
   margin-bottom: 1.5em;
 }
 
-.rating-box {
-  background-color: #f1f1f1;
+.rating div {
+  background-color: var(--grey-light);
   padding: 1em;
   gap: 0.7em;
 }
 
-.rating-box figure, .social-media figure {
+.rating div figure, .social-media figure {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 0.6em;
 }
-.rating-box figcaption {
+.rating div figcaption {
   font-size: 1.8em;
   font-weight: 800;
 }
 
 
-.rating-box p:first-child{
+.rating div p:first-child{
   display: flex;
   gap: 0.2em;
 }
 
-.rating-box p:first-child img {
+.rating div p:first-child img {
   width: 1.4em;
   height: 1.4em;
 }
 
-.rating-box p:last-child {
+.rating div p:last-child {
   line-height: 1.4;
 
 }
@@ -564,12 +672,214 @@ article time{
   font-weight: 800;
 }
 
-.social-media{
-  background-color: black;
+/* OVERIG ZAKELIJK PAGINA*/
+
+
+.zalen h2, .mogelijkheden h2, .referenties h2, .partners h2{
+  text-align: center;
+  align-items: center;
+  font-size: 1.7em;
+  margin: 1em 0 1em 0;
+}
+.zalen>p, .mogelijkheden>p, .partners>p{
+  text-align: center;
+  font-size: 0.9em;
+  padding: 0 0.7em 1.5em 0.7em;
+}
+
+.zakelijk>figure {
+  max-width: 345px; /* mobiel breedte */
+  margin: 5em auto 2em auto;
+  box-sizing: border-box;
+}
+
+.zakelijk>figure iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .zakelijk>figure {
+    max-width: 900px;
+  }
+}
+
+.we-bieden{
+  padding-top: 5em;
+}
+.we-bieden li{
+  font-size: 1em;
+}
+.we-bieden li p{
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+.mogelijkheden-opties{
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 0;
+}
+
+.mogelijkheden-opties li{
+  width: 50%;
+  list-style: none;
+}
+.mogelijkheden-opties a, .partners a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.partners a{
+  color:#661f80;
+}
+.mogelijkheden-opties a>img{
+  width: 100%;
+  height: auto;
+  filter: brightness(70%);
+}
+
+.mogelijkheden-opties h3{
+  position: absolute;
+  color: var(--white);
+  z-index: 1;
+}
+
+
+.referenties li>img:first-of-type{
+  width: 15em;
+  height: 15em;
+  padding: 0.2em;
+  border-radius: 50%;
+  background-image: var(--gradient1);
+  margin-bottom: 2em;
+}
+
+.referenties li p{
+  font-size: 1.2em;
+  padding: 3em 3em 0 3em;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+}
+
+.referenties small {
+  color: var(--text-black);
+  font-weight: 700;
+  padding: 3em;
+}
+
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 100%;
+}
+
+.slider li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slider li.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+✅ Pijltjes-styling
+css
+Copy code
+.slider-container button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
   color: white;
+  font-size: 2rem;
+  padding: 0.2em 0.5em;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-container .prev {
+  left: 0.5em;
+}
+
+.slider-container .next {
+  right: 0.5em;
+}
+
+.slider-container button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* bron: Chatgpt */
+.logo-partners {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em 0;
+  justify-items: center;
+  margin: 4em 0 2em 0;
+}
+
+.logo-partners img {
+  max-height: 60px;
+  max-width: 120px;
+  object-fit: contain;
+  width: auto;
+  height: auto;
+}
+
+/* Laatste logo centreren bij 2 per rij */
+.logo-partners img:last-child:nth-child(2n + 1) {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+@media (min-width: 600px) {
+  .logo-partners {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Laatste logo centreren bij 3 per rij */
+  .logo-partners img:last-child:nth-child(3n + 1) {
+    grid-column: 2 / 3;
+  }
+}
+
+
+.social-media{
+  position: relative;
+  background-color: var(--black);
+  color: var(--text-white);
   height: 100%;
   padding: 4em 0;
-  
+  overflow: hidden;
+}
+
+.zakelijk .social-media{
+  padding: 2.5em 0; 
 }
 
 .social-media figure img{
@@ -579,9 +889,54 @@ article time{
   border-radius: 0.5em;
 }
 
+
+/* bron: Youtube */
+.carrousel-foto{
+  position: absolute;
+  z-index: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.foto-slide{
+  filter: brightness(70%);
+  display: inline-block;
+  animation: 30s slide infinite linear;
+}
+
+@keyframes slide{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+
+}
+
+.foto-slide img{
+  height: 100%;
+  object-fit: cover;
+  width: auto;
+}
+
+.social-media h2,
+.social-media figure, .zakelijk .social-media img {
+  position: relative;
+  z-index: 2;
+}
+
+.zakelijk .foto-slide img{
+  height: 220px;
+}
+
 .nieuwsbrief{
-  background-color: black;
-  color: white;
+  background-color: var(--black);
+  color: var(--white);
   gap: 0.9em;
 }
 
@@ -592,7 +947,7 @@ article time{
 
 .nieuwsbrief span {
   background: var(--gradient1);
-  color: white;
+  color: var(--text-white);
 }
 
 .nieuwsbrief form{
@@ -618,13 +973,13 @@ article time{
 .nieuwsbrief input:last-child{
   border-radius: 0 0.3em 0.3em 0;
   background-image: var(--gradient1);
-  color: white;
+  color: var(--text-white);
   font-weight: bold;
 }
 
 .nieuwsbrief a, footer a {
   font-weight: bold;
-  color: white;
+  color: var(--text-white);
 }
 
 .nieuwsbrief small{
@@ -633,7 +988,7 @@ article time{
 
 footer {
   background-image: var(--gradient1);
-  color: white;
+  color: var(--text-white);
   width: 100%;
 }
 
@@ -649,7 +1004,7 @@ footer details{
  border-bottom: black;
 }
 
-footer summary{
+footer summary, .zaal-inhoud a{
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -665,7 +1020,6 @@ footer details ul{
   list-style: none;
   justify-content: left;
   align-items: flex-start;
- 
 }
 
 footer details{
@@ -694,7 +1048,6 @@ footer section:nth-of-type(2), footer section:nth-of-type(3){
   gap: 2em;
   padding: 1em;
   margin: 2em 0;
-  
 }
 
 footer section:nth-of-type(3){
@@ -728,4 +1081,6 @@ footer section:nth-of-type(4){
   font-weight: 600;
   margin: 2em 0;
 }
+
+
 
