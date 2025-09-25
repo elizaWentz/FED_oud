@@ -3,7 +3,7 @@
 
 console.log("hi");
 
-
+// met behulp van ChatGPT
 const filterButtons = document.querySelectorAll('.filter-button');
 
 filterButtons.forEach(button => {
@@ -12,5 +12,6 @@ filterButtons.forEach(button => {
     button.classList.add('active');
   });
 });
+
 
 
