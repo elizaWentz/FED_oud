@@ -19,7 +19,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Eliza Wentzel
 
   #### Je startniveau:
-  rood (kies uit zwart, rood óf blauw)
+  Blauw (kies uit zwart, rood óf blauw)
 
   #### Je focus:
   surface plane (kies uit responsive óf surface plane)
