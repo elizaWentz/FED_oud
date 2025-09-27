@@ -154,8 +154,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-  
   Goed:
   Het coderen van de code gaat vlot en soepel. Ik loop tegen weinig problemen aan gelukkig. Als ik ergens echt niet uitkom vraag ik het aan de docent of Chatgpt. Ik ben wel goed in CSS, ik vind dit ook leuk om te doen. Javascript heb ik zeker wel vaker een handje bij nodig.
 
@@ -176,10 +174,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Alles moet in de main staan
+  - naam index bij zakelijk weghalen
+  - Alle classes qua naam zelfde stijl houden
+  - elk blokje moet wel h2 hebben ondanks dat het lijkt op een h3 of h4
+  - Aria-label Is ook een extra
 
 </details>
 
@@ -208,7 +207,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  Ik was goed opweg met mijn website. Het zag er precies uit als die van DeLaMar zelf, daar was ik wel trots op. Helaas kwam ik er te laat achter   dat er vooral gefocused word op je eigen proces en niet op of de website precies hetzelfde is als de echte. Hierdoor heb ik wel veel tijd     verloren. Dit vind ik wel erg jammer en zorgde voor meer stress. Ik heb nu namelijk veel minder tijd voor de toegankelijkheid en surface plane in het algemeen.
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -223,10 +222,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
+  - Scroll animatie is een goede als extra
+  - Hele images map opnieuw uploaden als images niet goed laden
   - nog een punt
-  - ...
+  - Toggle pijltje omhoog draaien met javascript bij detail summary als er nog tijd is
+  - YouTube video optie: mdn video met javascript telt ook mee als 1 van de 5 voor surface plane
+  - @media (prefers-color-scheme: dark){:root{}
+  moet helemaal onderaan
+
+
+
+
 
 </details>
 
