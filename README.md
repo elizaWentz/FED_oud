@@ -280,6 +280,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 bron: https://delamar.nl/
 https://delamar.nl/zakelijk
 
+reduced-motion icoon:
+https://thenounproject.com/icon/motion-5734643/
+
   bronnen coderen:
   1. Zoom effect, bron: ChatGPT - prompt:"Hoe creeër ik een zoom in effect op een img zoals bij delamar?"
   2. Filterknoppen Javascript, bron: ChatGPT - prompt:"I want to have the first button stay a certain way, but the second needs to only have a black border and no background color and black letters instead of white. I want it to be able to switch back to the style of the first button when you click on it and that the first button will change to the no border etc. How will i achieve this?"
