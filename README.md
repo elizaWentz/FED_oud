@@ -94,13 +94,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/breakdown-dynamisch1.jpg" width="375px" alt="breakdown van een dynamisch deel">
   <p>
-    Dynamisch onderdeel: carrousel die je kan bedienen door middel van knoppen
+    Dynamisch onderdeel: swipable menu voor genres
+    
   </p>
 
   ### wellicht nog een dynamisch deel (bijv filter): 
   <img src="readme-images/breakdown-dynamisch2.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
    <p>
-     Dynamisch onderdeel: swipable menu voor genres
+     Dynamisch onderdeel: carrousel die je kan bedienen door middel van knoppen
   </p>
 
 </details>
