@@ -293,6 +293,7 @@ https://thenounproject.com/icon/motion-5734643/
      7. partners grid, bron: ChatGPT - prompt: "Ik krijg de groottes van de logo's niet gelijk, waardoor ze niet goed in de grid komen te staan, wat doe ik verkeerd?"
      8. social media carrousel, bron: youtube -https://www.youtube.com/watch?v=nAjR0Oj0J8E
      9. carrousel referenties, bron: ChatGPT - prompt: ik heb dit als javascript voor mijn carrousel, maar hij doet het niet. Kan je mij hiermee helpen?
-     10. hamburger menu, bron:https://codepen.io/elizaWentz/pen/JoGYBEr 
+     10. hamburger menu, bron:https://codepen.io/elizaWentz/pen/JoGYBEr
+     11. header kleur verandering, bron: Chat-GPT - prompt: "Ik wil dat mijn header een andere kleur krijgt als je naar beneden scrollt, hoe moet ik dit doen?"
 
 </details>
