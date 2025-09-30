@@ -9,7 +9,7 @@
 	<title>Hét theater in hartje Amsterdam | DeLaMar</title>
 	
 	<link href="styles/style.css" rel="stylesheet">
-	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+	<link rel="icon" type="image/svg+xml" href="images/delamar-logo.svg">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,544 +22,775 @@
 			<img src="images/delamar-logo.svg" alt="logo van DeLaMar">
 		</a>
 
-		<nav>
-			<ul class="main_navigation">
-				<li>
-					<a href="index.html"><img src="images/icoon-ruimtes.svg" alt="agenda icoon"> Ruimtes</a>
-				</li>
-				<li>
-					<a href="index.html"><img src="images/icoon-zoek-wit.svg" alt="zoek icoon"> zoeken</a>
-				</li>
-				<li>
-					<a href="index.html"><img src="images/icoon-hamburger.svg" alt="hamburger menu"> menu</a>
-				</li>
+		<div class="mobile-nav">
+			<a href="index.html"><img src="images/icoon-ruimtes.svg" alt="" aria-hidden="true"> Ruimtes</a>
+				
+			<a href="index.html"><img src="images/icoon-zoek-wit.svg" alt="" aria-hidden="true"> zoeken</a>
+				
+			<button class="hamburger-toggle" aria-label="Open menu" aria-expanded="false">
+				<img src="images/icoon-hamburger.svg" alt="" aria-hidden="true">
+				menu
+			</button>
+		</div>
+
+		<nav class="desktop-nav">
+			<ul>
+			  	<li><a href="#">Ruimtes <img src="images/icoon-dropdown.svg" alt="" aria-hidden="true"></a></li>
+			  	<li><a href="#"> Mogelijkheden <img src="images/icoon-dropdown.svg" alt="" aria-hidden="true"></a></li>
+			  	<li><a href="#"> Cases <img src="images/icoon-dropdown.svg" alt="" aria-hidden="true"></a></li>
+			 	<li><a href="#"> Faciliteiten <img src="images/icoon-dropdown.svg" alt="" aria-hidden="true"></a></li>
+			  	<li><a href="#"> Over ons <img src="images/icoon-dropdown.svg" alt="" aria-hidden="true"></a></li>
 			</ul>
 
-			<ul class="extranavigation">
+		</nav>
+
+		<div class="desktop-extra-nav">
+			<ul>
+				<li><button id="toggle-motion"><img src="images/icoon-reduced-motion.svg" alt="" aria-hidden="true">Reduced motion</button></li>
+				<li><a href="zakelijk.html"><img src="images/icoon-extern-wit.svg" alt="" aria-hidden="true"> Theater</a></li>
+				<li><a href="#"><img src="images/icoon-toegankelijkheid.svg" alt="" aria-hidden="true"> Toegankelijkheid</a></li>
+				<li><a href="#"><img src="images/icoon-inloggen.svg" alt="" aria-hidden="true"> Inloggen</a></li>
+				<li><a href="#">NL | EN</a></li>
+			  </ul>
+
+
+			<!-- De placeholder verdwijnt zodra iemand begint te typen, label voor screenreaders zodat het altijd leesbaar is -->
+			<form role="search">
+				<input type="search" placeholder="Waar ben je naar op zoek?">
+				<img width="20" src="images/icoon-zoek.svg" alt="" aria-hidden="true">
+			</form>
+		</div>
+
+		<nav>
+			<ul>
+                <li>
+                    <a href="#"> Ruimtes <img src="images/icoon-pijl-wit.svg" alt="" aria-hidden="true"> </a>
+                </li>
+                <li>
+                    <a href="#"> Mogelijkheden <img src="images/icoon-pijl-wit.svg" alt="" aria-hidden="true"> </a>
+                </li>
+                <li>
+                    <a href="#">Cases <img src="images/icoon-pijl-wit.svg" alt="" aria-hidden="true"> </a>
+                </li>
 				<li>
+                    <a href="#"> Faciliteiten <img src="images/icoon-plus.svg" alt="" aria-hidden="true"> </a>
+                </li>
+                <li>
+                    <a href="#"> Over ons <img src="images/icoon-plus.svg" alt="" aria-hidden="true"> </a>
+                </li>
+                <li>
+                    <a href="index.html">Theater <img src="images/icoon-extern.svg" alt="" aria-hidden="true"> </a>
+                </li>
+                <li>
+                    <a href="#"> toegankelijkheid <img src="images/icoon-plus.svg" alt="" aria-hidden="true"> </a>
+                </li>
+            </ul>
+		</nav>
+	</header>
+	
+
+	<main>
+		<h1>
+			Welkom bij het DeLaMar theater zakelijk verhuur
+		</h1>
+
+		<section class="uitgelicht"> 
+			
+			<ul class="carousel-slides">
+				<li aria-label="Slide 1 van 3" aria-live="polite">
+					<figure class="slideshow-container">
+						<div class="zoom-afbeelding">
+							<picture>
+								<source media="(min-width: 900px)" srcset="images/zakelijk/main-1-desktop.jpg">
+								<img src="images/zakelijk/main-1-mobile.jpg" alt="Evenement 1 Delamar">
+							</picture>	
+						</div>
+					</figure>
+
+					<section>
+						<h2>
+							Zakelijke evenementen			
+						</h2>
+						<p>
+							Een onvergetelijk congres, evenement of vergadering in het theater? 
+							Bij DeLaMar leggen we de rode loper voor je uit.
+						</p>
+						<a href="#">
+							Ontdek de Mogelijkheden
+							<img src="images/icoon-pijl-wit.svg" alt="" aria-hidden="true">
+						</a>
+						<small>
+							of bel
+							<a href="#">
+								<img class="telefoon" src="images/icoon-telefoon.svg" alt="" aria-hidden="true">
+								020 555 2680
+							</a>
+						</small>
+					</section>
+				</li>
+				<li aria-label="Slide 2 van 3"  aria-live="polite">
+					<figure class="slideshow-container">
+						<div class="zoom-afbeelding">
+							<picture>
+								<source media="(min-width: 900px)" srcset="images/zakelijk/main-2-desktop.jpg">
+								<img src="images/zakelijk/main-2-mobile.jpg" alt="Evenement 2 Delamar">
+							</picture>
+						</div>
+					</figure>
+		
+					<section>
+						<h2>
+							Zakelijke evenementen			
+						</h2>
+						<p>
+							Een onvergetelijk congres, evenement of vergadering in het theater? 
+							Bij DeLaMar leggen we de rode loper voor je uit.
+						</p>
+						<a href="#">
+							Ontdek de Mogelijkheden
+							<img src="images/icoon-pijl-wit.svg" alt="" aria-hidden="true">
+						</a>
+						<small>
+							of bel
+							<a href="#">
+								<img src="images/icoon-telefoon.svg" alt="" aria-hidden="true">
+								020 555 2680
+							</a>
+						</small>
+					</section>
+				</li>
+				<li aria-label="Slide 3 van 3" aria-live="polite">
+					<figure class="slideshow-container">
+						<div class="zoom-afbeelding">
+							<picture>
+								<source media="(min-width: 900px)" srcset="images/zakelijk/main-3-desktop.jpg">
+								<img src="images/zakelijk/main-3-mobile.jpg" alt="Evenement 3 Delamar">
+							</picture>
+						</div>
+					</figure>
+		
+					<section>
+						<h2>
+							Zakelijke evenementen			
+						</h2>
+						<p>
+							Een onvergetelijk congres, evenement of vergadering in het theater? 
+							Bij DeLaMar leggen we de rode loper voor je uit.
+						</p>
+						<a href="#">
+							Ontdek de Mogelijkheden
+							<img src="images/icoon-pijl-wit.svg" alt="" aria-hidden="true">
+						</a>
+						<small>
+							of bel
+							<a href="#">
+								<img src="images/icoon-telefoon.svg" alt="" aria-hidden="true">
+								020 555 2680
+							</a>
+						</small>
+					</section>
+				</li>
+			</ul>
+			<div class="carousel-dots">
+				<button class="dot active" aria-label="Slide 1"></button>
+				<button class="dot" aria-label="Slide 2"></button>
+				<button class="dot" aria-label="Slide 3"></button>
+			</div>
+		</section>
+			
+
+		<section  class="zalen">
+			<h2> 
+				Onze ruimtes
+			</h2>
+			<p>
+				DeLaMar beschikt over twee theaterzalen en diverse sfeervolle foyers. 
+				Hierdoor hebben we voor elke (zakelijke) gelegenheid een geschikte en unieke ruimte.
+			</p>
+
+			<div class="zalen-wrapper">
+				<article class="zaal-inhoud">
+					<picture>
+						<source media="(min-width: 900px)" srcset="images/zakelijk/wim-zonneveld-zaal-desktop.jpg">
+						<img src="images/zakelijk/wim-zonneveld-zaal-mobile.jpg" width="432" height="243" alt="Wim Zonneveld zaal">
+					</picture>
+					
+	
+						<section>
+							<h3>
+								Wim Zonneveld zaal
+							</h3>
+	
+							<P>
+								Max. capaciteit: 
+								<strong>
+									949
+								</strong>
+							</P>
+			
+							<P>
+							Meest geschikt voor:
+							</P>
+							<ul class="zaal-iconen">
+								<li>
+									<img src="images/zakelijk/icoon-congres.svg" height="25" alt="" aria-hidden="true" >
+									Congres
+								</li>
+								<li>
+									<img src="images/zakelijk/icoon-premiere.svg" height="25" alt="" aria-hidden="true" >
+									Premiere
+								</li>
+								<li>
+									<img src="images/zakelijk/icoon-evenement.svg" height="25" alt="" aria-hidden="true">
+									Evenement
+								</li>
+							</ul>
+							<ul class="voorzieningen-lijst">
+								<li> Groot scherm van 6 meter breed (16:9)</li>
+								<li> 13.000 ANSI lumen laser beamer</li>
+								<li> Technische voorzieningen</li>
+							</ul>
+						</section>
+						<a href="#">
+							Meer informatie
+							<img src="images/icoon-pijl-wit.svg" alt="" aria-hidden="true">
+						</a>
+						
+				</article>
+	
+				<article class="zaal-inhoud">
+					<picture>
+						<source media="(min-width: 900px)" srcset="images/zakelijk/mary-dresselhuys-zaal-desktop.jpg">
+						<img src="images/zakelijk/mary-dresselhuys-zaal-mobile.jpg" width="432" height="243" alt="Mary Dresselhuys zaal">
+					</picture>
+	
+						<section>
+							<h3>
+								Mary Dresselhuys zaal
+							</h3>
+	
+							<P>
+								Max. capaciteit: 
+								<strong>
+									601
+								</strong>
+							</P>
+			
+							<P>
+							Meest geschikt voor:
+							</P>
+							<ul class="zaal-iconen">
+								<li>
+									<img src="images/zakelijk/icoon-congres.svg" height="25" alt="" aria-hidden="true" >
+									Congres
+								</li>
+								<li>
+									<img src="images/zakelijk/icoon-premiere.svg" height="25" alt="" aria-hidden="true">
+									Premiere
+								</li>
+								<li>
+									<img src="images/zakelijk/icoon-evenement.svg" height="25" alt="" aria-hidden="true">
+									Evenement
+								</li>
+							</ul>
+							<ul class="voorzieningen-lijst">
+								<li> Groot scherm van 5 meter breed (16:9)</li>
+								<li> 10.000 ANSI lumen beamer</li>
+								<li> Intiem en sfeervol</li>
+							</ul>
+						</section>
+						<a href="#">
+							Meer informatie
+							<img src="images/icoon-pijl-wit.svg" alt="" aria-hidden="true">
+						</a>
+						
+				</article>
+	
+				<article class="zaal-inhoud">
+					<picture>
+						<source media="(min-width: 900px)" srcset="images/zakelijk/rode-foyer-desktop.jpg">
+						<img src="images/zakelijk/rode-foyer-mobile.jpg" width="432" height="243" alt="Rode foyer">
+					</picture>
+	
+						<section>
+							<h3>
+								Rode foyer
+							</h3>
+	
+							<P>
+								Max. capaciteit: 
+								<strong>
+									330
+								</strong>
+							</P>
+			
+							<P>
+							Meest geschikt voor:
+							</P>
+							<ul class="zaal-iconen">
+								<li>
+									<img src="images/zakelijk/icoon-vergadering.svg" height="25" alt="" aria-hidden="true">
+									Congres
+								</li>
+								<li>
+									<img src="images/zakelijk/icoon-receptie.svg" height="25" alt="" aria-hidden="true">
+									Premiere
+								</li>
+								<li>
+									<img src="images/zakelijk/icoon-evenement.svg" height="25" alt="" aria-hidden="true">
+									Evenement
+								</li>
+							</ul>
+							<ul class="voorzieningen-lijst">
+								<li>Fotocollectie van Anton Corbijn</li>
+								<li>Grote bar met LED verlichting in kleur aan te passen</li>
+								<li>Technische ondersteuning</li>
+							</ul>
+						</section>
+						<a href="#">
+							Meer informatie
+							<img src="images/icoon-pijl-wit.svg" alt="" aria-hidden="true">
+						</a>
+				</article>
+			</div>
+
+			
+
+			<a href="#">
+				Alle ruimtes
+				<img src="images/icoon-pijl-zwart.svg" alt="" aria-hidden="true">
+			</a>
+			<a href="#">
+				Bekijk de plattegrond
+				<img src="images/icoon-pijl-zwart.svg" alt="" aria-hidden="true">
+			</a>
+			
+		</section>
+		
+		
+		<figure class="youtube-video">
+			<iframe
+				src="https://www.youtube.com/embed/GXtrct12mSw?si=GXy9D_mlIA9uHa1w" 
+				title="YouTube video player" 
+			 	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+				referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+			</iframe>
+		</figure>
+		
+
+		<section class="we-bieden">
+			<h2>
+				We bieden
+			</h2>
+			<ul>
+				<li>
+					<img src="images/zakelijk/icoon-inspirerend.svg" height="100" alt="" aria-hidden="true">
+					<h3>
+						Inspirerende omgeving
+					</h3>
+					<p>
+						De historische gevel, indrukwekkende zalen, intieme foyers en 
+						bijzondere fotocollecties maken van DeLaMar een inspirerende omgeving voor elk evenement.
+					</p>
+				</li>
+				<li>
+					<img src="images/zakelijk/icoon-full-service.svg" height="100" alt="" aria-hidden="true">
+					<h3>
+						Full service
+					</h3>
+					<p>
+						Alle benodigde faciliteiten zijn in ons gebouw aanwezig, of worden speciaal ingehuurd. 
+						Wij zorgen ervoor dat het je aan niets ontbreekt.
+					</p>
+				</li>
+				<li>
+					<img src="images/zakelijk/icoon-totaal-ontzorgen.svg" height="100" alt="" aria-hidden="true">
+					<h3>
+						Totaal ontzorgen
+					</h3>
+					<p>
+						Hostmanship staat bij ons hoog in het vaandel. 
+						We denken vooruit en overtreffen verwachtingen, zodat jij je nergens zorgen over hoeft te maken.
+					</p>
+				</li>
+				
+			</ul>
+		</section>
+			
+		<section class="mogelijkheden">
+			<h2>
+				Onze mogelijkheden
+			</h2>
+			<p>
+				Ons historische pand met moderne uitstraling biedt volop mogelijkheden voor zowel kleine als grote evenementen. 
+				Of het nu gaat om een congres, exclusief diner of première: alles is op jouw specifieke wensen aan te passen. 
+				Daarnaast staan onze gastvrije en ervaren medewerkers altijd klaar om iedereen een onvergetelijk evenement te bezorgen!
+			</p>
+
+			<ul class="mogelijkheden-opties">
+				<li>
+					<a href="#">
+						<picture>
+							<source media="(min-width: 900px)" srcset="images/zakelijk/congres-desktop.jpg">
+							<img loading="lazy" src="images/zakelijk/congres-mobile.jpg"  alt="" aria-hidden="true">
+						</picture>
+						
+						<h3>
+							Congres
+							<img src="images/icoon-kortepijl-wit-rechts.svg"  width="8"	alt="" aria-hidden="true">
+						</h3>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<picture>
+							<source media="(min-width: 900px)" srcset="images/zakelijk/vergadering-desktop.png">
+							<img loading="lazy" src="images/zakelijk/vergadering-mobile.png"  alt="" aria-hidden="true">
+						</picture>
+						
+						
+						<h3>
+							Vergadering
+							<img src="images/icoon-kortepijl-wit-rechts.svg" alt="" aria-hidden="true">
+						</h3>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<picture>
+							<source media="(min-width: 900px)" srcset="images/zakelijk/evenement-desktop.jpg">
+							<img loading="lazy" src="images/zakelijk/evenement-mobile.jpg"  alt="" aria-hidden="true">
+						</picture>
+						
+						<h3>
+							Evenement
+							<img src="images/icoon-kortepijl-wit-rechts.svg" alt="" aria-hidden="true">
+						</h3>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<picture>
+							<source media="(min-width: 900px)" srcset="images/zakelijk/diner-desktop.jpg">
+							<img loading="lazy" src="images/zakelijk/diner-mobile.jpg"  alt="" aria-hidden="true">
+						</picture>
+						
+						<h3>
+							Diner
+							<img src="images/icoon-kortepijl-wit-rechts.svg" alt="" aria-hidden="true">
+						</h3>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<picture>
+							<source media="(min-width: 900px)" srcset="images/zakelijk/premiere-desktop.jpg">
+							<img loading="lazy" src="images/zakelijk/premiere-mobile.jpg" alt="" aria-hidden="true">
+						</picture>
+						
+						<h3>
+							Premiere
+							<img src="images/icoon-kortepijl-wit-rechts.svg" alt="" aria-hidden="true">
+						</h3>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<picture>
+							<source media="(min-width: 900px)" srcset="images/zakelijk/receptie-desktop.jpg">
+							<img loading="lazy" src="images/zakelijk/receptie-mobile.jpg"  alt="" aria-hidden="true">
+						</picture>
+						
+						<h3>
+							Receptie
+							<img src="images/icoon-kortepijl-wit-rechts.svg" alt="" aria-hidden="true">
+						</h3>
+					</a>
+				</li>
+			</ul>
+		</section>
+
+		<section class="referenties">
+			<h2>
+				Referenties
+			</h2>
+			
+			<ul>
+				<li aria-label="Slide 1 van 6">
+					<div>
+						<img loading="lazy" src="images/zakelijk/logo-booking_1.png"  width="330" alt="Booking.com ">
+						<img loading="lazy" src="images/zakelijk/logo-booking_1.png"  height="40" alt="Booking.com">
+						<section>
+							<p>
+								"The team at Delamar Theater provided professional, quality, and personalized service 
+								for our 300 pax conference in January 2018. The full day event was a major success."
+							</p>
+							<small>
+								Booking.com
+							</small>
+							<a href="#">
+								Bekijk case
+								<img src="images/icoon-pijl-wit.svg" alt="" aria-hidden="true">
+							</a>
+						</section>
+						
+					</div>
+				</li>
+
+				<li aria-label="Slide 2 van 6">
+					<div>
+						<img loading="lazy" src="images/zakelijk/logo-uva_2.png"  width="330" alt="Universiteit van Amsterdam">
+						<img loading="lazy" src="images/zakelijk/logo-uva_2.png"  height="40" alt="" aria-hidden="true">
+						<section>	
+							<p>
+								"Een evenement organiseren in het DeLaMar Theater is echt een feestje! 
+								De samenwerking voelt als een warm bad, dankzij de enorme gastvrijheid van alle medewerkers. 
+								De proactieve en flexibele aanpak van het team, van techniek tot catering, 
+								zorgt ervoor dat alles soepel verloopt en je als organisator volledig wordt ontzorgd. 
+								De prachtige locatie geeft je evenement echt iets extra's."
+							</p>
+							<small>
+								Universiteit van Amsterdam
+							</small>
+							<a href="#">
+								Bekijk case
+								<img src="images/icoon-pijl-wit.svg" alt="" aria-hidden="true">
+							</a>
+						</section>
+						
+					</div>
+					
+				</li>
+
+				<li aria-label="Slide 3 van 6">
+					<div>
+						<img loading="lazy" src="images/zakelijk/logo-ade_3.png"  width="330" alt="Amsterdam Dance Event">
+						<img loading="lazy" src="images/zakelijk/logo-ade_3.png"  height="40" alt="" aria-hidden="true">
+						<section>
+							<p>
+								"The DeLaMar Theater was widely praised by delegates for its light and airy spaces, 
+								the undeniably stylish decor, abundant networking facilities and central location. 
+								The DeLaMar was a positive move."
+							</p>
+							<small>
+								Amsterdam Dance Event
+							</small>
+							<a href="#">
+								Bekijk case
+								<img src="images/icoon-pijl-wit.svg" alt="" aria-hidden="true">
+							</a>
+						</section>
+					</div>
+					
+				</li>
+
+				<li aria-label="Slide 4 van 6">
+					<div>
+						<img loading="lazy" src="images/zakelijk/logo-nexus-instituut_4.jpg"  width="330" alt="Nexus instituut">
+						<img loading="lazy" src="images/zakelijk/logo-nexus-instituut_4.jpg"  height="40" alt="" aria-hidden="true">
+						<section>
+							<p>
+								"De sprekers waren zeer tevreden en ook de bezoekers waren onder de indruk. 
+								Jullie professionele en vriendelijke service heeft zeer aan de goede sfeer en de succesvolle middag bijgedragen."
+							</p>
+							<small>
+								Nexus instituut
+							</small>
+						</section>
+						
+					</div>
+					
+				</li>
+
+				<li aria-label="Slide 5 van 6">
+					<div>
+						<img loading="lazy" src="images/zakelijk/logo-awwwards_5.png"  width="330" alt="Awwwards">
+						<img loading="lazy" src="images/zakelijk/logo-awwwards_5.png"  height="40" alt="" aria-hidden="true">
+						<section>	
+							<p>
+								"The team at the DeLaMar Theatre were a delight to work with and the venue itself 
+								is beautiful and well equipped, perfect for a digital design focused event like ours."
+							</p>
+							<small>
+								Awwwards
+							</small>
+							<a href="#">
+								Bekijk case
+								<img src="images/icoon-pijl-wit.svg" alt="" aria-hidden="true">
+							</a>
+						</section>
+						
+					</div>
+					
+				</li>
+					
+				<li aria-label="Slide 6 van 6">
+					<div>
+						<img loading="lazy" src="images/zakelijk/logo-bunq_6.jpg"  width="330" alt="Bunq">
+						<img loading="lazy" src="images/zakelijk/logo-bunq_6.jpg"  height="40" alt="" aria-hidden="true">
+						<section>
+							<p>
+								"Voor het organiseren van ons tiende bunq Update event zijn we perfect geholpen door de mensen van DeLaMar. 
+								Snel, flexibel en bovenal megaprofessioneel!"
+							</p>
+							<small>
+								bunq
+							</small>
+							<a href="#">
+								Bekijk case
+								<img src="images/icoon-pijl-wit.svg" alt="" aria-hidden="true">
+							</a>
+						</section>
+						
+					</div>
 					
 				</li>
 			</ul>
-		</nav>
-		
+			<button>
+				<img src="images/icoon-kortepijl-wit-links.svg" alt="" aria-hidden="true">
+			</button>
+			<button>
+				<img src="images/icoon-kortepijl-wit-rechts.svg" alt="" aria-hidden="true">
+			</button>
+		</section>
 
-	</header>
 
-	<main>
-
-		<figure class="slideshow-container" class="zoom-afbeelding" aria-live="polite">
-			<img id="slideshow" src="images/zakelijk/main-1-mobile.jpg" alt="evenement Delamar">
-		</figure>
-
-		
-
-		<section >
+		<section class="partners">
 			<h2>
-				Zakelijke evenementen			
+				Onze Partners
 			</h2>
 			<p>
-				Een onvergetelijk congres, evenement of vergadering in het theater? 
-				Bij DeLaMar leggen we de rode loper voor je uit.
+				Met trots presenteren we hier de organisaties waar we mee samenwerken. 
+				Ben je nieuwsgierig of wil je ook partner worden?
 			</p>
 			<a href="#">
-				Ontdek de Mogelijkheden
-				<img src="images/icoon-pijl-wit.svg" alt="witte pijl naar rechts" aria-hidden="true">
+				Meer informatie
 			</a>
+			<section class="logo-partners">
+				<img loading="lazy" src="images/zakelijk/logo-heineken.svg" alt="Heineken">
+				<img loading="lazy" src="images/zakelijk/logo-sligro.svg" alt="Sligro">
+				<img loading="lazy" src="images/zakelijk/logo-eijsink.svg" alt="Eijsink">
+				<img loading="lazy" src="images/zakelijk/logo-effektief.svg" alt="Effectief">
+				<img loading="lazy" src="images/zakelijk/logo-vrumona.svg" alt="Vrumona">
+				<img loading="lazy" src="images/zakelijk/logo-peeze.png" alt="Peeze">
+				<img loading="lazy" src="images/zakelijk/logo-unica.svg" alt="Unica">
+				<img loading="lazy" src="images/zakelijk/logo-hard-rock-hotel-amsterdam.svg" alt="Hard Rock Cafe">
+				<img loading="lazy" src="images/zakelijk/logo-unique-venues-of-amsterdam.svg" alt="Unique venues of Amsterdam">
+			</section>
+
+
+		</section>
+
+		<section class="nieuwsbrief">
+
+			<div class="nieuwsbrief-left">
+				<h2>
+				  <span>Onze zakelijke nieuwsbrief</span>
+				  <span>ontvangen?</span>
+				</h2>
+				<small>
+				  Lees onze
+				  <a href="#">privacy- en cookieverklaring</a>
+				</small>
+			</div>
+
+			<div class="nieuwsbrief-right">
+				<p>
+					Op de hoogte blijven van de grenzeloze zakelijke mogelijkheden binnen ons bijzondere theater? 
+					Meld je dan aan voor onze zakelijke nieuwsbrief!
+				</p>
+	
+				<form>
+					<label for="email" class="visually-hidden">Vul je e-mailadres in om je aan te melden voor de nieuwsbrief</label>
+					<input type="email" id="email" placeholder="Je e-mailadres" required>
+					<input type="submit" value="Inschrijven">
+				</form>
+			</div>
+			
 			<small>
-				of bel
+				lees onze
 				<a href="#">
-					<img src="images/icoon-telefoon.svg" alt="icoon telefoon">
-					020 555 2680
+					privacy- en cookieverklaring
 				</a>
 			</small>
 		</section>
+
+		
+
+		<section class="social-media">
+			<div class="carrousel-foto">
+				<div class="foto-slide">
+					<img loading="lazy" src="images/zakelijk/linkedin-1.png" alt="" aria-hidden="true">
+					<img loading="lazy" src="images/zakelijk/linkedin-2.png" alt ="" aria-hidden="true">
+					<img loading="lazy" src="images/zakelijk/linkedin-3.png" alt ="" aria-hidden="true">
+					<img loading="lazy" src="images/zakelijk/linkedin-4.png" alt ="" aria-hidden="true">
+					<img loading="lazy" src="images/zakelijk/linkedin-5.png" alt ="" aria-hidden="true">
+					<img loading="lazy" src="images/zakelijk/linkedin-6.png" alt ="" aria-hidden="true">
+				</div>
+				<div class="foto-slide">
+					<img loading="lazy" src="images/zakelijk/linkedin-1.png" alt ="" aria-hidden="true">
+					<img loading="lazy" src="images/zakelijk/linkedin-2.png" alt ="" aria-hidden="true">
+					<img loading="lazy" src="images/zakelijk/linkedin-3.png" alt ="" aria-hidden="true">
+					<img loading="lazy" src="images/zakelijk/linkedin-4.png" alt ="" aria-hidden="true">
+					<img loading="lazy" src="images/zakelijk/linkedin-5.png" alt ="" aria-hidden="true">
+					<img loading="lazy" src="images/zakelijk/linkedin-6.png" alt ="" aria-hidden="true">
+				</div>
+			</div>
+			
+			<h2>
+				Volg ons op 
+			</h2>
+			<img loading="lazy" src="images/zakelijk/icoon-linkedin.svg" alt="linkedin logo">
+		</section>
+
+		
 		
 	</main>
 
-	<section  class="zalen">
-		<h2> 
-			Onze ruimtes
-		</h2>
-		<p>
-			DeLaMar beschikt over twee theaterzalen en diverse sfeervolle foyers. 
-			Hierdoor hebben we voor elke (zakelijke) gelegenheid een geschikte en unieke ruimte.
-		</p>
-
-		<article class="zaal-inhoud">
-			<img src="images/zakelijk/wim-zonneveld-zaal-mobile.jpg" alt="Wim Zonneveld zaal">
-
-				<section>
-					<h3>
-						Wim Zonneveld zaal
-					</h3>
-
-					<P>
-						Max. capaciteit: 
-						<strong>
-							949
-						</strong>
-					</P>
 	
-					<P>
-					Meest geschikt voor:
-					</P>
-					<ul class="zaal-iconen">
-						<li>
-							<img src="images/zakelijk/icoon-congres.svg"  alt="icoon congres" height="25">
-							Congres
-						</li>
-						<li>
-							<img src="images/zakelijk/icoon-premiere.svg" alt="icoon premiere" height="25">
-							Premiere
-						</li>
-						<li>
-							<img src="images/zakelijk/icoon-evenement.svg" alt="icoon evenement" height="25">
-							Evenement
-						</li>
-					</ul>
-					<ul class="voorzieningen-lijst">
-						<li> Groot scherm van 6 meter breed (16:9)</li>
-						<li> 13.000 ANSI lumen laser beamer</li>
-						<li> Technische voorzieningen</li>
-					  </ul>
-				</section>
-				<a href="#">
-					Meer informatie
-					<img src="images/icoon-pijl-wit.svg" alt="witte pijl naar rechts" aria-hidden="true">
-				</a>
-				
-		</article>
-
-		<article class="zaal-inhoud">
-			<img src="images/zakelijk/mary-dresselhuys-zaal-mobile.jpg" alt="Mary Dresselhuys zaal">
-
-				<section>
-					<h3>
-						Mary Dresselhuys zaal
-					</h3>
-
-					<P>
-						Max. capaciteit: 
-						<strong>
-							601
-						</strong>
-					</P>
-	
-					<P>
-					Meest geschikt voor:
-					</P>
-					<ul class="zaal-iconen">
-						<li>
-							<img src="images/zakelijk/icoon-congres.svg" alt="icoon congres" height="25">
-							Congres
-						</li>
-						<li>
-							<img src="images/zakelijk/icoon-premiere.svg" alt="icoon premiere" height="25">
-							Premiere
-						</li>
-						<li>
-							<img src="images/zakelijk/icoon-evenement.svg" alt="icoon evenement" height="25">
-							Evenement
-						</li>
-					</ul>
-					<ul class="voorzieningen-lijst">
-						<li> Groot scherm van 5 meter breed (16:9)</li>
-						<li> 10.000 ANSI lumen beamer</li>
-						<li> Intiem en sfeervol</li>
-					</ul>
-				</section>
-				<a href="#">
-					Meer informatie
-					<img src="images/icoon-pijl-wit.svg" alt="witte pijl naar rechts" aria-hidden="true">
-				</a>
-				
-		</article>
-
-		<article class="zaal-inhoud">
-			<img src="images/zakelijk/rode-foyer-mobile.jpg" alt="Rode foyer">
-
-				<section>
-					<h3>
-						Rode foyer
-					</h3>
-
-					<P>
-						Max. capaciteit: 
-						<strong>
-							330
-						</strong>
-					</P>
-	
-					<P>
-					Meest geschikt voor:
-					</P>
-					<ul class="zaal-iconen">
-						<li>
-							<img src="images/zakelijk/icoon-vergadering.svg" alt="icoon vergadering" height="25">
-							Congres
-						</li>
-						<li>
-							<img src="images/zakelijk/icoon-receptie.svg" alt="icoon receptie" height="25">
-							Premiere
-						</li>
-						<li>
-							<img src="images/zakelijk/icoon-evenement.svg" alt="icoon evenemnt" height="25">
-							Evenement
-						</li>
-					</ul>
-					<ul class="voorzieningen-lijst">
-						<li>Fotocollectie van Anton Corbijn</li>
-						<li>Grote bar met LED verlichting in kleur aan te passen</li>
-						<li>Technische ondersteuning</li>
-					</ul>
-				</section>
-				<a href="#">
-					Meer informatie
-					<img src="images/icoon-pijl-wit.svg" alt="witte pijl naar rechts" aria-hidden="true">
-				</a>
-		</article>
-
-		<a href="#">
-			Alle ruimtes
-			<img src="images/icoon-pijl-zwart.svg" alt="witte pijl naar rechts" aria-hidden="true">
-		</a>
-		<a href="#">
-			Bekijk de plattegrond
-			<img src="images/icoon-pijl-zwart.svg" alt="witte pijl naar rechts" aria-hidden="true">
-		</a>
-		
-	</section>
-	
-	
-	<figure>
-		<iframe
-		src="https://www.youtube.com/embed/GXtrct12mSw?si=GXy9D_mlIA9uHa1w" 
-		title="YouTube video player" 
-		frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-		referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-		</iframe>
-	</figure>
-	
-
-	<section class="we-bieden">
-		<h2>
-			We bieden
-		</h2>
-		<ul>
-			<li>
-				<img src="images/zakelijk/icoon-inspirerend.svg" alt="icoon lampje" height="100">
-				<h3>
-					Inspirerende omgeving
-				</h3>
-				<p>
-					De historische gevel, indrukwekkende zalen, intieme foyers en 
-					bijzondere fotocollecties maken van DeLaMar een inspirerende omgeving voor elk evenement.
-				</p>
-			</li>
-			<li>
-				<img src="images/zakelijk/icoon-full-service.svg" alt="icoon hand die motorsleutel vasthoud" height="100">
-				<h3>
-					Full service
-				</h3>
-				<p>
-					Alle benodigde faciliteiten zijn in ons gebouw aanwezig, of worden speciaal ingehuurd. 
-					Wij zorgen ervoor dat het je aan niets ontbreekt.
-				</p>
-			</li>
-			<li>
-				<img src="images/zakelijk/icoon-totaal-ontzorgen.svg" alt="icoon man die relaxed" height="100">
-				<h3>
-					Totaal ontzorgen
-				</h3>
-				<p>
-					Hostmanship staat bij ons hoog in het vaandel. 
-					We denken vooruit en overtreffen verwachtingen, zodat jij je nergens zorgen over hoeft te maken.
-				</p>
-			</li>
-			
-		</ul>
-	</section>
-		
-	<section class="mogelijkheden">
-		<h2>
-			Onze mogelijkheden
-		</h2>
-		<p>
-			Ons historische pand met moderne uitstraling biedt volop mogelijkheden voor zowel kleine als grote evenementen. 
-			Of het nu gaat om een congres, exclusief diner of première: alles is op jouw specifieke wensen aan te passen. 
-			Daarnaast staan onze gastvrije en ervaren medewerkers altijd klaar om iedereen een onvergetelijk evenement te bezorgen!
-		</p>
-
-		<ul class="mogelijkheden-opties">
-			<li>
-				<a href="#">
-					<img src="images/zakelijk/congres-mobile.jpg" width="187.5" alt="congres">
-					<h3>
-						Congres
-						<img src="images/icoon-kortepijl-wit.svg"  width="8"	alt="pijl naar rechts">
-					</h3>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="images/zakelijk/vergadering-mobile.png" width="187.5" alt="vergadering">
-					
-					<h3>
-						Vergadering
-						<img src="images/icoon-kortepijl-wit.svg" alt="pijl naar rechts">
-					</h3>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="images/zakelijk/evenement-mobile.jpg" width="187.5" alt="evenement">
-					<h3>
-						Evenement
-						<img src="images/icoon-kortepijl-wit.svg" alt="pijl naar rechts">
-					</h3>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="images/zakelijk/diner-mobile.jpg" width="187.5" alt="Diner">
-					<h3>
-						Diner
-						<img src="images/icoon-kortepijl-wit.svg" alt="pijl naar rechts">
-					</h3>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="images/zakelijk/premiere-mobile.jpg" width="187.5" alt="premiere">
-					<h3>
-						Premiere
-						<img src="images/icoon-kortepijl-wit.svg" alt="pijl naar rechts">
-					</h3>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="images/zakelijk/receptie-mobile.jpg" width="187.5" alt="receptie">
-					<h3>
-						Receptie
-						<img src="images/icoon-kortepijl-wit.svg" alt="pijl naar rechts">
-					</h3>
-				</a>
-			</li>
-		</ul>
-	</section>
-
-	<section class="referenties">
-		<h2>
-			Referenties
-		</h2>
-		<div class="slider-container">
-			<ul class="slider">
-				<li class="slide-acive">
-					<img src="images/zakelijk/logo-booking_1.png"  width="330" alt="Booking.com logo">
-					<img src="images/zakelijk/logo-booking_1.png"  height="40" alt="Booking.com logo">
-					<p>
-						"The team at Delamar Theater provided professional, quality, and personalized service 
-						for our 300 pax conference in January 2018. The full day event was a major success."
-					</p>
-					<small>
-						Booking.com
-					</small>
-					<a href="#">
-						Bekijk case
-						<img src="images/icoon-pijl-wit.svg" alt="witte pijl naar rechts" aria-hidden="true">
-					</a>
-				</li>
-
-				<li>
-					<img src="images/zakelijk/logo-uva_2.png"  width="330" alt="Universiteit van Amsterdam logo">
-					<img src="images/zakelijk/logo-uva_2.png"  height="40" alt="Universiteit van Amsterdam logo">
-					<p>
-						"Een evenement organiseren in het DeLaMar Theater is echt een feestje! 
-						De samenwerking voelt als een warm bad, dankzij de enorme gastvrijheid van alle medewerkers. 
-						De proactieve en flexibele aanpak van het team, van techniek tot catering, 
-						zorgt ervoor dat alles soepel verloopt en je als organisator volledig wordt ontzorgd. 
-						De prachtige locatie geeft je evenement echt iets extra's."
-					</p>
-					<small>
-						Universiteit van Amsterdam
-					</small>
-					<a href="#">
-						Bekijk case
-						<img src="images/icoon-pijl-wit.svg" alt="witte pijl naar rechts" aria-hidden="true">
-					</a>
-				</li>
-
-				<li>
-					<img src="images/zakelijk/logo-ade_3.png"  width="330" alt="Amsterdam Dance Event logo">
-					<img src="images/zakelijk/logo-ade_3.png"  height="40" alt="Amsterdam Dance Event logo">
-					<p>
-						"The DeLaMar Theater was widely praised by delegates for its light and airy spaces, 
-						the undeniably stylish decor, abundant networking facilities and central location. 
-						The DeLaMar was a positive move."
-					</p>
-					<small>
-						Amsterdam Dance Event
-					</small>
-					<a href="#">
-						Bekijk case
-						<img src="images/icoon-pijl-wit.svg" alt="witte pijl naar rechts" aria-hidden="true">
-					</a>
-				</li>
-
-				<li>
-					<img src="images/zakelijk/logo-nexus-instituut_4.jpg"  width="330" alt="Nexus instituut logo">
-					<img src="images/zakelijk/logo-nexus-instituut_4.jpg"  height="40" alt="Nexus instituut logo">
-					<p>
-						"De sprekers waren zeer tevreden en ook de bezoekers waren onder de indruk. 
-						Jullie professionele en vriendelijke service heeft zeer aan de goede sfeer en de succesvolle middag bijgedragen."
-					</p>
-					<small>
-						Nexus instituut
-					</small>
-				</li>
-
-				<li>
-					<img src="images/zakelijk/logo-awwwards_5.png"  width="330" alt="Awwwards logo">
-					<img src="images/zakelijk/logo-awwwards_5.png"  height="40" alt="Awwwards logo">
-					<p>
-						"The team at the DeLaMar Theatre were a delight to work with and the venue itself 
-						is beautiful and well equipped, perfect for a digital design focused event like ours."
-					</p>
-					<small>
-						Awwwards
-					</small>
-					<a href="#">
-						Bekijk case
-						<img src="images/icoon-pijl-wit.svg" alt="witte pijl naar rechts" aria-hidden="true">
-					</a>
-				</li>
-				
-				<li>
-					<img src="images/zakelijk/logo-bunq_6.jpg"  width="330" alt="bunq logo">
-					<img src="images/zakelijk/logo-bunq_6.jpg"  height="40" alt="bunq logo">
-					<p>
-						"Voor het organiseren van ons tiende bunq Update event zijn we perfect geholpen door de mensen van DeLaMar. 
-						Snel, flexibel en bovenal megaprofessioneel!"
-					</p>
-					<small>
-						bunq
-					</small>
-					<a href="#">
-						Bekijk case
-						<img src="images/icoon-pijl-wit.svg" alt="witte pijl naar rechts" aria-hidden="true">
-					</a>
-				</li>
-			</ul>
-			<button class="prev">&#10094;</button>
-			<button class="next">&#10095;</button>
-		</div>
-	</section>
-
-
-	<section class="partners">
-		<h2>
-			Onze Partners
-		</h2>
-		<p>
-			Met trots presenteren we hier de organisaties waar we mee samenwerken. 
-			Ben je nieuwsgierig of wil je ook partner worden?
-		</p>
-		<a href="#">
-			Meer informatie
-		</a>
-		<section class="logo-partners">
-			<img src="images/zakelijk/logo-heineken.svg" alt="Heineken logo">
-			<img src="images/zakelijk/logo-sligro.svg" alt="Sligro logo">
-			<img src="images/zakelijk/logo-eijsink.svg" alt="Eijsink logo">
-			<img src="images/zakelijk/logo-effektief.svg" alt="Effectief logo">
-			<img src="images/zakelijk/logo-vrumona.svg" alt="Vrumona logo">
-			<img src="images/zakelijk/logo-peeze.png" alt="Peeze logo">
-			<img src="images/zakelijk/logo-unica.svg" alt="Unica logo">
-			<img src="images/zakelijk/logo-hard-rock-hotel-amsterdam.svg" width="142.5" alt="Hard Rock Cafe logo">
-			<img src="images/zakelijk/logo-unique-venues-of-amsterdam.svg" width="142.5" alt="Unique venues of Amsterdam logo">
-		</section>
-
-
-	</section>
-
-	<section class="nieuwsbrief">
-		<h2>
-			<span>
-				Onze zakelijke nieuwsbrief
-			</span> 
-			<span>
-				ontvangen?
-			</span>
-		</h2>
-		<p>
-			Op de hoogte blijven van de grenzeloze zakelijke mogelijkheden binnen ons bijzondere theater? 
-			Meld je dan aan voor onze zakelijke nieuwsbrief!
-		</p>
-
-		<form>
-			<input type = "email" placeholder="Je e-mailadres" >
-			<input type="submit" value="Inschrijven">
-		</form>
-		<small>
-			lees onze
-			<a href="#">
-				privacy- en cookieverklaring
-			</a>
-		</small>
-	</section>
-
-	
-
-	<section class="social-media">
-		<div class="carrousel-foto">
-			<div class="foto-slide">
-				<img src="images/zakelijk/linkedin-1.png" alt="">
-				<img src="images/zakelijk/linkedin-2.png" alt="">
-				<img src="images/zakelijk/linkedin-3.png" alt="">
-				<img src="images/zakelijk/linkedin-4.png" alt="">
-				<img src="images/zakelijk/linkedin-5.png" alt="">
-				<img src="images/zakelijk/linkedin-6.png" alt="">
-			</div>
-			<div class="foto-slide">
-				<img src="images/zakelijk/linkedin-1.png" alt="">
-				<img src="images/zakelijk/linkedin-2.png" alt="">
-				<img src="images/zakelijk/linkedin-3.png" alt="">
-				<img src="images/zakelijk/linkedin-4.png" alt="">
-				<img src="images/zakelijk/linkedin-5.png" alt="">
-				<img src="images/zakelijk/linkedin-6.png" alt="">
-			</div>
-		</div>
-		
-		<h2>
-			Volg ons op 
-		</h2>
-		<img src="images/zakelijk/icoon-linkedin.svg" alt="linkedin logo">
-	</section>
 
 	<footer>
 		<section>
-			<p>
-				Marnixstraat 402
-
-				<a href="#">
-					Mail ons
-				</a>
-				<a href="#">
-					Bel ons
-				</a>
+			<h4>
+				Contactgegevens
+			</h4>
+				<address>
+					Marnixstraat 402<br>
+					<a href="mailto:events@delamar.nl">events@delamar.nl</a><br>
+					<a href="tel:+31(0)205552680">+31 (0)20 555 2680</a>
+				  </address>
 				<small>
-					van 11:00 tot 20:00 uur
+					van 9:00 tot 17:30 uur
 				</small>
-			</p>
 		</section>
-		
 
-		<details>
-			<summary>
-				Handige links
-				<img src="images/icoon-dropdown.svg" alt="dropdown icoon">
-			</summary>
+		<section class="desktop-zakelijk-verhuur">
+			<h4>
+				Zakelijk verhuur
+			</h4>
+			<ul>
+				<li>
+					<a href="#">Bereikbaarheid</a>
+				</li>
+				<li>
+					<a href="#">Contact</a>
+				</li>
+				<li>
+					<a href="#">Ruimtes</a>
+				</li>
+				<li>
+					<a href="#">Mogelijkheden</a>
+				</li>
+				<li>
+					<a href="#">Faciliteiten</a>
+				</li>
+			</ul>
+		</section>
+
+		<section class="desktop-handige-links">
+			<h4>
+				Handige Links
+			</h4>
 			<ul>
 				<li>
 					<a href="#">Bereikbaarheid</a>
@@ -571,14 +802,15 @@
 					<a href="#">Veelgestelde vragen</a>
 				</li>
 				<li>
-					<a href="#" target="_blank" rel="noopener">Inloggen</a>
+					<a href="#">Inloggen</a>
 				</li>
 				<li>
 					<a href="#">Technische gegevens</a>
 				</li>
 			</ul>
-		</details>
 
+		</section>
+			
 		<details>
 			<summary>
 				Zakelijk verhuur
@@ -604,16 +836,40 @@
 
 		</details>
 
+		<details>
+			<summary>
+				Handige links
+				<img src="images/icoon-dropdown.svg" alt="dropdown icoon">
+			</summary>
+			<ul>
+				<li>
+					<a href="#">Bereikbaarheid</a>
+				</li>
+				<li>
+					<a href="#">Contact</a>
+				</li>
+				<li>
+					<a href="#">Veelgestelde vragen</a>
+				</li>
+				<li>
+					<a href="#" target="_blank" rel="noopener">Inloggen</a>
+				</li>
+				<li>
+					<a href="#">Technische gegevens</a>
+				</li>
+			</ul>
+		</details>
+
 		<section>
-			<img src="images/delamar-logo.svg" alt="delamar logo">
+			<img loading="lazy" src="images/delamar-logo.svg" alt="delamar logo">
 			<p> 
 				DeLaMar is een initiatief van de VandenEnde Foundation
 			</p>
 		</section>
 
 		<section>
-			<img src="images/privacy-verified.png" alt=" privacy verified logo">
-			<img src="images/green-key-logo-goud.jpg" alt=" green key logo">
+			<img loading="lazy" src="images/privacy-verified.png" alt=" privacy verified">
+			<img loading="lazy" src="images/green-key-logo-goud.jpg" alt=" green key GOUD">
 		</section>
 
 		<section>
@@ -621,29 +877,27 @@
 				veilig betalen met
 			</p>
 			<section class="betaling-opties">
-				<img src="images/logo-ideal.svg" alt="ideal logo">
-				<img src="images/logo-mastercard.svg" alt="mastercard logo">
-				<img src="images/logo-visa.svg" alt="visa logo">
-				<img src="images/logo-mastercard.svg" alt="mastercard logo">
-				<img src="images/logo-podiumcadeaukaart.svg" height="28px" alt="podium cadeaukaart logo">
-				<img src="images/logo-apple-pay.svg" height="28px" alt="apple pay logo">
-				<img src="images/logo-kunstcultuurcadeaukaart.webp" alt="kunst cultuur cadeaukaart logo">
-				<img src="images/delamar-cadeaukaart.png" alt="Delamar cadeaukart logo">
+				<img loading="lazy" src="images/logo-ideal.svg" alt="Ideal">
+				<img loading="lazy" src="images/logo-mastercard.svg" alt="Mastercard">
+				<img loading="lazy" src="images/logo-visa.svg" alt="Visa">
+				<img loading="lazy" src="images/logo-mastercard.svg" alt="Mastercard">
+				<img loading="lazy" src="images/logo-podiumcadeaukaart.svg" height="28" alt="Podium cadeaukaart">
+				<img loading="lazy" src="images/logo-apple-pay.svg" height="28" alt="Apple Pay">
+				<img loading="lazy" src="images/logo-kunstcultuurcadeaukaart.webp" alt="Kunst cultuur cadeaukaart">
+				<img loading="lazy" src="images/delamar-cadeaukaart.png" alt="DeLaMar cadeaukaart">
 			</section>
 		</section>
 		
 		<section>
-			<nav>
-				<a href="#">
-					Privacy- en cookieverklaring
-				</a>
-				<a href="#">
-					Disclaimer
-				</a>
-				<a href="#">
-					Voorwaarden				
-				</a>
-			</nav>
+			<a href="#">
+				Privacy- en cookieverklaring
+			</a>
+			<a href="#">
+				Disclaimer
+			</a>
+			<a href="#">
+				Voorwaarden				
+			</a>
 		</section>
 		
 	</footer>

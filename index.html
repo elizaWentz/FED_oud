@@ -9,7 +9,7 @@
 	<title>Hét theater in hartje Amsterdam | DeLaMar</title>
 	
 	<link href="styles/style.css" rel="stylesheet">
-	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+	<link rel="icon" type="image/svg+xml" href="images/delamar-logo.svg">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,385 +22,578 @@
 			<img src="images/delamar-logo.svg" alt="logo van DeLaMar">
 		</a>
 
+		<div class="mobile-nav">
+			<a href="zakelijk.html"><img src="images/icoon-agenda.svg" alt="" aria-hidden="true"> Agenda </a>
+				
+			<a href="index.html"><img src="images/icoon-zoek-wit.svg" alt="" aria-hidden="true"> zoeken</a>
+				
+			<button class="hamburger-toggle" aria-label="Open menu" aria-expanded="false">
+				<img src="images/icoon-hamburger.svg" alt="" aria-hidden="true">
+				menu
+			</button>
+		</div>
+	
 		<nav>
-			<ul class="main_navigation">
-				<li>
-					<a href="zakelijk.html"><img src="images/icoon-agenda.svg" alt="agenda icoon"> Agenda </a>
-				</li>
-				<li>
-					<a href="index.html"><img src="images/icoon-zoek-wit.svg" alt="zoek icoon"> zoeken</a>
-				</li>
-				<li>
-					<a href="index.html"><img src="images/icoon-hamburger.svg" alt="hamburger menu"> menu</a>
-				</li>
+			<ul>
+                <li>
+                    <a href="#"> Agenda <img src="images/icoon-pijl-wit.svg" alt="" aria-hidden="true"> </a>
+                </li>
+                <li>
+                    <a href="#"> Voorstellingen <img src="images/icoon-pijl-wit.svg" alt="" aria-hidden="true"> </a>
+                </li>
+                <li>
+                    <a href="#">Je bezoek <img src="images/icoon-plus.svg" alt="" aria-hidden="true"> </a>
+                </li>
+                <li>
+                    <a href="#"> Over ons <img src="images/icoon-plus.svg" alt="" aria-hidden="true"> </a>
+                </li>
+                <li>
+                    <a href="#">zakelijk verhuur <img src="images/icoon-extern.svg" alt="" aria-hidden="true"> </a>
+                </li>
+                <li>
+                    <a href="#"> toegankelijkheid <img src="images/icoon-plus.svg" alt="" aria-hidden="true"> </a>
+                </li>
+            </ul>
+		</nav>
+
+		<nav class="desktop-nav">
+			<ul>
+			  <li><a href="#">Agenda <img src="images/icoon-dropdown.svg" alt="" aria-hidden="true"></a></li>
+			  <li><a href="#"> Voorstellingen <img src="images/icoon-dropdown.svg" alt="" aria-hidden="true"></a></li>
+			  <li><a href="#"> Je bezoek <img src="images/icoon-dropdown.svg" alt="" aria-hidden="true"></a></li>
+			  <li><a href="#"> Over ons <img src="images/icoon-dropdown.svg" alt="" aria-hidden="true"></a></li>
 			</ul>
 
-			<ul class="extranavigation">
-				<li>
-					
-				</li>
-			</ul>
 		</nav>
-		
+
+		<div class="desktop-extra-nav">
+			<ul>
+				<li><button id="toggle-motion"><img src="images/icoon-reduced-motion.svg" alt="" aria-hidden="true">Reduced motion</button></li>
+				<li><a href="zakelijk.html"><img src="images/icoon-extern-wit.svg" alt="" aria-hidden="true"> Zakelijke verhuur</a></li>
+				<li><a href="#"><img src="images/icoon-toegankelijkheid.svg" alt="" aria-hidden="true"> Toegankelijkheid</a></li>
+				<li><a href="#"><img src="images/icoon-inloggen.svg" alt="" aria-hidden="true"> Inloggen</a></li>
+				<li><a href="#">NL | EN</a></li>
+			</ul>
+
+
+			<form role="search">
+				<input type="search" placeholder="Waar ben je naar op zoek?">
+				<img src="images/icoon-zoek.svg" alt="" aria-hidden="true">
+			</form>
+		</div>
 
 	</header>
 
+	
+
 	<main>
-		<!-- bron zoom-afbeelding: ChatGPT -->
-		<figure class="slideshow-container" class="zoom-afbeelding" aria-live="polite">
-			<img id="slideshow" src="images/homepage/main-1-mobile.jpg" alt="Musical Malle Balle">
-			<figcaption class="slideshow-text">Musical</figcaption>
-		</figure>
+		<h1>
+			Welkom bij het DeLaMar theater
+		</h1>
 
+		<section class="uitgelicht">
+			
+			<ul class="carousel-slides">
+				<li aria-label="Slide 1 van 3" aria-live="polite">
+					<!-- bron zoom-afbeelding: ChatGPT -->
+					<figure class="slideshow-container">
+						<div class="zoom-afbeelding">
+							<picture>
+								<source media="(min-width: 900px)" srcset="images/homepage/main-1-desktop.jpg">
+								<img src="images/homepage/main-1-mobile.jpg" alt="Musical Malle Balle">
+							</picture>
+						</div>
+						<figcaption class="slideshow-text">Musical</figcaption>
+
+					</figure>
+					
+					<section>
+						<p> Musical</p>
+						<h2>
+							Malle Babbe
+						</h2>
+						<p>
+							De Rob de Nijs Musical
+						</p>
+						<a href="#">
+							Meer informatie
+							<img src="images/icoon-pijl-wit.svg" alt="" aria-hidden="true">
+						</a>
+					</section>
+				</li>
+				<li aria-label="Slide 2 van 3" aria-live="polite">
+					<!-- bron zoom-afbeelding: ChatGPT -->
+					<figure class="slideshow-container">
+						<div class="zoom-afbeelding">
+							<picture>
+								<source media="(min-width: 900px)" srcset="images/homepage/main-2-desktop.png">
+								<img src="images/homepage/main-2-mobile.png" alt="Musical Malle Balle">
+							</picture>
+						</div>
+						
+					</figure>
+	
+					<section >
+
+						<h2>
+							Dit seizoen te zien
+						</h2>
+						<p>
+							Grappige, indrukwekkende en spectaculaire voorstellingen!
+						</p>
+						<a href="#">
+							Bekijk alle voorstellingen
+							<img src="images/icoon-pijl-wit.svg" alt="" aria-hidden="true">
+						</a>
+					</section>
+				</li>
+				<li aria-label="Slide 3 van 3" aria-live="polite">
+					<figure class="slideshow-container">
+						<div class="zoom-afbeelding">
+							<picture>
+								<source media="(min-width: 900px)" srcset="images/homepage/main-3-desktop.jpg">
+								<img src="images/homepage/main-3-mobile.jpg" alt="Special Yoah">
+							</picture>
+							
+						</div>
+						<figcaption class="slideshow-text">Specials</figcaption>
+					</figure>
+	
+					<section>
+						<p> special</p>
+						<h2>
+							Yoah
+						</h2>
+						<p>
+							Een onmiskenbare Japanse circussensatie
+						</p>
+						<a href="#">
+							Meer informatie
+							<img src="images/icoon-pijl-wit.svg" alt="" aria-hidden="true">
+						</a>
+					</section>
+				</li>
+			</ul>
+			
+			<!--aria-current om huidige pagina aan te geven-->
+			<div class="carousel-dots">
+				<button class="dot active" aria-label="Slide 1" aria-current="true"></button>
+				<button class="dot" aria-label="Slide 2"></button>
+				<button class="dot" aria-label="Slide 3"></button>
+			</div>
+		</section>
 		
+		<section class="zoek">
+			<h2>Welke voorstelling zoek je?</h2>
+		  
+			<div class="zoek-wrapper">
+			  <div class="zoek-links">
+				<h3>Zoek jouw voorstelling of artiest</h3>
 
-		<section >
-			<h2>
-				Malle Babbe
+				<!-- De placeholder verdwijnt zodra iemand begint te typen, label voor screenreaders zodat het altijd leesbaar is -->
+				<form role="search">
+					<label for="site-search" class="visually-hidden">Zoeken op de site</label>
+				  	<input class="site-search" type="search" placeholder="Zoek jouw voorstelling of artiest">
+				  	<img src="images/icoon-zoek.svg" alt="" aria-hidden="true">
+				</form>
+			  </div>
+		  
+			  <div class="zoek-rechts">
+				<h3>Of kies je favoriete genre</h3>
+				<ul>
+				  <li><button>Musical</button></li>
+				  <li><button>Toneel</button></li>
+				  <li><button>Muziektheater</button></li>
+				  <li><button>Cabaret</button></li>
+				  <li><button>Jeugd</button></li>
+				  <li><button>Dans</button></li>
+				  <li><button>Specials</button></li>
+				  <li><button>Concert</button></li>
+				  <li><button>Show</button></li>
+				</ul>
+			  </div>
+			</div>
+		  </section>
+	
+		<section class="voorstellingen">
+			<h2> 
+				Onze voorstellingen
 			</h2>
-			<p>
-				De Rob de Nijs Musical
-			</p>
+	
+			<ul>
+				<li>
+					<button class="filter-button active">
+						Populair
+					</button>
+				</li>
+				<li>
+					<button class="filter-button">
+						nu te zien
+					</button>
+				</li>
+			</ul>
+			<div class="voorstellingen-wrapper">
+				<article class="malle-babbe">
+					<figure class="slideshow-container">
+						<img loading="lazy" src="images/homepage/malle-babbe.jpg" alt="Malle babbe de musical">
+						<figcaption class="slideshow-text">Musical</figcaption>
+					</figure>
+					
+					<h3>
+						Malle Babbe
+					</h3>
+					<P>
+						de rob de Nijs musical
+					</P>
+					<small>
+						vandaag t/m zo 21 sep
+					</small>
+				</article>
+				<article class="plien-bianca">
+					<figure class="slideshow-container">
+						<img loading="lazy" src="images/homepage/plien-bianca.jpg" alt="Malle babbe de musical">
+						<figcaption class="slideshow-text">Cabaret</figcaption>
+					</figure>
+					
+					<h3>
+						Plien & Bianca
+					</h3>
+					<P>
+						Harrekidee!
+					</P>
+					<small>
+						wo 01 okt t/m zo 12 okt
+					</small>
+				</article>
+				
+				<article class="laan-woe">
+					<figure class="slideshow-container">
+						<img loading="lazy" src="images/homepage/van-der-laan-woe.jpg" alt="Malle babbe de musical">
+						<figcaption class="slideshow-text">Cabaret</figcaption>
+					</figure>
+				
+					<h3>
+					Van der laan & Woe
+					</h3>
+					<P>
+					Dinsdagmiddag
+					</P>
+					<small>
+					do 18 jun 2026 t/m 27 jun 2026
+					</small>
+				</article>
+			</div>
+			
+			
 			<a href="#">
-				Meer informatie
-				<img src="images/icoon-pijl-wit.svg" alt="witte pijl naar rechts" aria-hidden="true">
+				Alle voorstellingen 
+				<img src="images/icoon-pijl-zwart.svg" alt="" aria-hidden="true">
+			</a>
+	
+			
+			
+		</section>
+	
+		<section class="cabaret">
+			<picture>
+				<source media="(min-width: 900px)" srcset="images/homepage/musical-cabaret-desktop.jpg">
+				<img loading="lazy" src="images/homepage/musical-cabaret-mobile.jpg" alt="Portret Chantal Janzen en Daria Bukvić">
+			</picture>
+			
+
+			<article>
+				<h2>
+					De musicalklassieker Cabaret komt exclusief naar DeLaMar! 
+				</h2>
+				<p>
+					Niemand minder dan Chantal Janzen vertolkt hierin de iconische rol van Sally Bowles, 
+					waarmee ze na 10 jaar terugkeert naar het theater. De voorstelling wordt geregisseerd door Daria Bukvić, 
+					die hiervoor een uitstap maakt van haar functie als artistiek directeur bij Theater Oostpool. Zij zal een nieuwe, 
+					grootschalige bewerking van Cabaret maken.
+				</p>
+		
+				<a href="#">
+					Meer info 
+					<img src="images/icoon-pijl-zwart.svg" alt="" aria-hidden="true">
+				</a>
+			</article>
+			
+	
+		</section>
+	
+		<section class="achter-de-schermen">
+			<h2>
+				Achter de schermen
+			</h2>
+			
+			<div class="achter-de-schermen-wrapper">
+				<article>
+				<!-- bron data-video-id: ChatGPT -->
+				<figure class="video-placeholder" data-video-id="https://www.youtube.com/watch?v=bBopylxxq4A&t=2s&ab_channel=AVROTROS">
+					<img loading="lazy" src="images/homepage/hairspray-mobile.png" alt="Hairspray The Kick Off 2025" width="375" height="282">
+					<button class="play-button" aria-label="Video afspelen">
+						<img loading="lazy" src="images/icoon-playbutton.svg" alt="" aria-hidden="true">
+					</button>
+					<button class="info-button" aria-label="Meer informatie over deze video">
+						  <img src="images/icoon-info.svg" alt="" aria-hidden="true">
+					</button>
+					<h3 class="video-caption">
+						<span>Optreden Hairspray | Musical</span> 
+						<span>Awards: The Kick-Off 2025</span>
+					</h3>
+				</figure>
+			</article>
+	
+			<article>
+				<!-- bron data-video-id: ChatGPT -->
+				<figure class="video-placeholder" data-video-id="https://www.youtube.com/watch?v=Xgi8UipB59I&t=2s&ab_channel=AVROTROS">
+					<img loading="lazy" src="images/homepage/stoornis-of-my-life-mobile.png" alt="Stoornis of my life the kick off 2025" width="375" height="282">
+					<button class="play-button" aria-label="Video afspelen">
+						<img loading="lazy" src="images/icoon-playbutton.svg" alt="" aria-hidden="true">
+					</button>
+					<button class="info-button" aria-label="Meer informatie over deze video">
+						  <img src="images/icoon-info.svg" alt="" aria-hidden="true">
+					</button>
+					<h3 class="video-caption">
+						<span>Optreden Stoornis of my Life |</span> 
+						<span>Musical Awards: The Kick-Off 2025</span>
+					</h3>
+				</figure>
+			</article>
+	
+			<article>
+				<!-- bron data-video-id: ChatGPT -->
+				<figure class="video-placeholder" data-video-id="https://www.youtube.com/watch?v=IsV0j83qgrs&t=1s&ab_channel=AVROTROS">
+					<img loading="lazy" src="images/homepage/foxtrot-mobile.png" alt="Foxtrot kick off 2025" width="375" height="282">
+					<button class="play-button" aria-label="Video afspelen">
+						<img loading="lazy" src="images/icoon-playbutton.svg" alt="" aria-hidden="true">
+					</button>
+					<button class="info-button" aria-label="Meer informatie over deze video">
+						  <img src="images/icoon-info.svg" alt="" aria-hidden="true">
+					</button>
+					<h3 class="video-caption">
+						<span>Optreden Foxtrot | Musical </span> 
+						<span>Awards: The Kick-Off 2025</span>
+					</h3>
+				</figure>
+			</article>
+			</div>
+			
+			<a href="#">
+				Toon meer
+				<img src="images/icoon-dropdown.svg" alt="" aria-hidden="true">
+			</a>
+	
+			<a href="#">
+				Bekijk meer
+				<img src="images/icoon-pijl-wit.svg" alt="" aria-hidden="true">
 			</a>
 		</section>
+	
+		<section class="rating">
+			<h3>
+				Wat vinden andere bezoekers van DeLaMar
+			</h3>
 
+			<div> 
+				<figure>
+					<figcaption>
+					  4,3/5
+					</figcaption>
+				
+					<p aria-label="Beoordeling: 4,3 van 5 sterren">
+						<img loading="lazy" src="images/homepage/full-star-rating.svg" alt="" aria-hidden="true">
+						<img loading="lazy" src="images/homepage/full-star-rating.svg" alt="" aria-hidden="true">
+						<img loading="lazy" src="images/homepage/full-star-rating.svg" alt="" aria-hidden="true">
+						<img loading="lazy" src="images/homepage/full-star-rating.svg" alt="" aria-hidden="true">
+						<img loading="lazy" src="images/homepage/half-star-rating.svg" alt="" aria-hidden="true">
+					</p>
+				</figure>
+	
+				<p>
+					uit <strong>15514 beoordelingen</strong> van onze bezoekers
+				</p>
+			</div>
+			
+				
+		</section>
+	
+		<section class="social-media">
+			<div class="carrousel-foto">
+				<div class="foto-slide">
+					<picture>
+						<source media="(min-width: 900px)" srcset="images/homepage/carrousel-1.jpg">
+						<img loading="lazy" src="images/homepage/carrousel-1-mobile.jpg" alt="" aria-hidden="true">
+					</picture>
+					<picture>
+						<source media="(min-width: 900px)" srcset="images/homepage/carrousel-2.jpg">
+						<img loading="lazy" src="images/homepage/carrousel-2-mobile.jpg" alt="" aria-hidden="true">
+					</picture>
+					<picture>
+						<source media="(min-width: 900px)" srcset="images/homepage/carrousel-3.jpg">
+						<img loading="lazy" src="images/homepage/carrousel-3-mobile.jpg" alt="" aria-hidden="true">
+					</picture>
+					<picture>
+						<source media="(min-width: 900px)" srcset="images/homepage/carrousel-4.jpg">
+						<img loading="lazy" src="images/homepage/carrousel-4-mobile.jpg" alt="" aria-hidden="true">
+					</picture>
+					<picture>
+						<source media="(min-width: 900px)" srcset="images/homepage/carrousel-5.jpg">
+						<img loading="lazy" src="images/homepage/carrousel-5-mobile.jpg" alt="" aria-hidden="true">
+					</picture>
+					<picture>
+						<source media="(min-width: 900px)" srcset="images/homepage/carrousel-6.jpg">
+						<img loading="lazy" src="images/homepage/carrousel-6-mobile.jpg" alt="" aria-hidden="true">
+					</picture>
+				</div>
+				<div class="foto-slide">
+					<picture>
+						<source media="(min-width: 900px)" srcset="images/homepage/carrousel-1.jpg">
+						<img loading="lazy" src="images/homepage/carrousel-1-mobile.jpg" alt="" aria-hidden="true">
+					</picture>
+					<picture>
+						<source media="(min-width: 900px)" srcset="images/homepage/carrousel-2.jpg">
+						<img loading="lazy" src="images/homepage/carrousel-2-mobile.jpg" alt="" aria-hidden="true">
+					</picture>
+					<picture>
+						<source media="(min-width: 900px)" srcset="images/homepage/carrousel-3.jpg">
+						<img loading="lazy" src="images/homepage/carrousel-3-mobile.jpg" alt="" aria-hidden="true">
+					</picture>
+					<picture>
+						<source media="(min-width: 900px)" srcset="images/homepage/carrousel-4.jpg">
+						<img loading="lazy" src="images/homepage/carrousel-4-mobile.jpg" alt="" aria-hidden="true">
+					</picture>
+					<picture>
+						<source media="(min-width: 900px)" srcset="images/homepage/carrousel-5.jpg">
+						<img loading="lazy" src="images/homepage/carrousel-5-mobile.jpg" alt="" aria-hidden="true">
+					</picture>
+					<picture>
+						<source media="(min-width: 900px)" srcset="images/homepage/carrousel-6.jpg">
+						<img loading="lazy" src="images/homepage/carrousel-6-mobile.jpg" alt="" aria-hidden="true">
+					</picture>
+				</div>
+			</div>
+	
+			<section>
+				<h2>
+					Volg ons op social media!
+				</h2>
 		
+				<figure>
+					<a href="#"><img loading="lazy" src="images/icoon-facebook.svg" alt="Facebook"></a>
+					<a href="#"><img loading="lazy" src="images/icoon-instagram.svg" alt="Instagram"></a>
+					<a href="#"><img loading="lazy" src="images/icoon-youtube.svg" alt="Youtube"></a>
+					<a href="#"><img loading="lazy" src="images/icoon-tiktok.svg" alt="Tiktok"></a>
+				</figure>
+			</section>
+			
+		</section>
+	
+		<section class="nieuwsbrief">
+			<div class="nieuwsbrief-left">
+				<h2>
+				  <span>Onze nieuwsbrief</span>
+				  <span>ontvangen?</span>
+				</h2>
+				<small>
+				  Lees onze
+				  <a href="#">privacy- en cookieverklaring</a>
+				</small>
+			</div>
+
+			<div class="nieuwsbrief-right">
+				<p>
+				  Twee keer per maand als eerste op de hoogte van nieuwe voorstellingen en aanbiedingen?
+				</p>
+				<form>
+					<label for="email" class="visually-hidden">Vul je e-mailadres in om je aan te melden voor de nieuwsbrief</label>
+					<input type="email" id="email" placeholder="Je e-mailadres" required>
+					<input type="submit" value="Inschrijven">
+				</form>
+			</div>
+
+			<small>
+				lees onze
+				<a href="#">
+					privacy- en cookieverklaring
+				</a>
+			</small>
+			
+		</section>
 		
 	</main>
 
-	<section class="zoek">
-		<form>
-			<input type = "search" placeholder="Zoek jouw voorstelling of artiest" >
-			<img width="20" src="images/icoon-zoek.svg" alt="zoek icoon" aria-hidden="true">
-		</form>
-		
-		<h3> Of kies je favoriete genre</h3>
-
-		<ul>
-			<li>
-				<button>
-					Musical
-				</button>
-			</li>
-			<li>
-				<button>
-					Toneel
-				</button>
-			</li>
-			<li>
-				<button>
-					Muziektheater
-				</button>
-			</li>
-			<li>
-				<button>
-					Cabaret
-				</button>
-			</li>
-			<li>
-				<button>
-					Jeugd
-				</button>
-			</li>
-			<li>
-				<button>
-					Dans
-				</button>
-			</li>
-			<li>
-				<button>
-					Specials
-				</button>
-			</li>
-			<li>
-				<button>
-					Concert
-				</button>
-			</li>
-			<li>
-				<button>
-					Show
-				</button>
-			</li>
-		</ul>
-	</section>
-
-	<section class="voorstellingen">
-		<h2> 
-			Onze voorstellingen
-		</h2>
-
-		<ul>
-			<li>
-				<button class="filter-button active">
-					Populair
-				</button>
-			</li>
-			<li>
-				<button class="filter-button">
-					nu te zien
-				</button>
-			</li>
-		</ul>
-
-		<article class="malle-babbe">
-			<figure class="slideshow-container">
-				<img src="images/homepage/main-1-desktop.jpg" alt="Malle babbe de musical">
-				<figcaption class="slideshow-text">Musical</figcaption>
-			</figure>
-			
-			<h3>
-				Malle Babbe
-			</h3>
-			<P>
-				de rob de Nijs musical
-			</P>
-			<time>
-				vandaag t/m zo 21 sep
-			</time>
-		</article>
-		<article class="plien-bianca">
-			<figure class="slideshow-container">
-				<img src="images/homepage/plien-bianca.jpg" alt="Malle babbe de musical">
-				<figcaption class="slideshow-text">Cabaret</figcaption>
-			</figure>
-			
-			<h3>
-				Plien & Bianca
-			</h3>
-			<P>
-				Harrekidee!
-			</P>
-			<time>
-				wo 01 okt t/m zo 12 okt
-			</time>
-		</article>
-		
-		<article class="laan-woe">
-			<figure class="slideshow-container">
-				<img src="images/homepage/van-der-laan-woe.jpg" alt="Malle babbe de musical">
-				<figcaption class="slideshow-text">Cabaret</figcaption>
-			</figure>
-		
-			<h3>
-			Van der laan & Woe
-			</h3>
-			<P>
-			Dinsdagmiddag
-			</P>
-			<time>
-			do 18 jun 2026 t/m 27 jun 2026
-			</time>
-		</article>
-		
-		<a href="#">
-			Alle voorstellingen 
-			<img src="images/icoon-pijl-zwart.svg" alt="zwarte pijl naar rechts" aria-hidden="true">
-		</a>
-
-		
-		
-	</section>
-
-	<section class="cabaret">
-		<img src="images/homepage/musical-cabaret.jpg" alt="Portret Chantal Janzen en Daria Bukvić">
-		<h3>
-			De musicalklassieker Cabaret komt exclusief naar DeLaMar! 
-		</h3>
-		<p>
-			Niemand minder dan Chantal Janzen vertolkt hierin de iconische rol van Sally Bowles, 
-			waarmee ze na 10 jaar terugkeert naar het theater. De voorstelling wordt geregisseerd door Daria Bukvić, 
-			die hiervoor een uitstap maakt van haar functie als artistiek directeur bij Theater Oostpool. Zij zal een nieuwe, 
-			grootschalige bewerking van 
-		</p>
-
-		<a href="#">
-			Meer info 
-			<img src="images/icoon-pijl-zwart.svg" alt="zwarte pijl naar rechts" aria-hidden="true">
-		</a>
-
-	</section>
-
-	<section class="achter-de-schermen">
-		<h2>
-			Achter de schermen
-		</h2>
-
-		<article>
-			<!-- bron data-video-id: ChatGPT -->
-			<figure class="video-placeholder" data-video-id="https://www.youtube.com/watch?v=bBopylxxq4A&t=2s&ab_channel=AVROTROS">
-				<img src="images/homepage/hairspray-mobile.png" alt="Hairspray The Kick Off 2025" width="375" height="282">
-				<button class="play-button" aria-label="Video afspelen">
-					<img src="images/icoon-playbutton.svg">
-				</button>
-    			<button class="info-button" aria-label="Meer informatie over deze video">
-      				<img src="images/icoon-info.svg" alt="">
-				</button>
-				<h3 class="video-caption">
-					<span>Optreden Hairspray | Musical</span> 
-					<span>Awards: The Kick-Off 2025</span>
-				</h3>
-			</figure>
-		</article>
-
-		<article>
-			<!-- bron data-video-id: ChatGPT -->
-			<figure class="video-placeholder" data-video-id="https://www.youtube.com/watch?v=Xgi8UipB59I&t=2s&ab_channel=AVROTROS">
-				<img src="images/homepage/stoornis-of-my-life-mobile.png" alt="Stoornis of my life the kick off 2025" width="375" height="282">
-				<button class="play-button" aria-label="Video afspelen">
-					<img src="images/icoon-playbutton.svg">
-				</button>
-    			<button class="info-button" aria-label="Meer informatie over deze video">
-      				<img src="images/icoon-info.svg" alt="">
-				</button>
-				<h3 class="video-caption">
-					<span>Optreden Stoornis of my Life |</span> 
-					<span>Musical Awards: The Kick-Off 2025</span>
-				</h3>
-			</figure>
-		</article>
-
-		<article>
-			<!-- bron data-video-id: ChatGPT -->
-			<figure class="video-placeholder" data-video-id="https://www.youtube.com/watch?v=IsV0j83qgrs&t=1s&ab_channel=AVROTROS">
-				<img src="images/homepage/foxtrot-mobile.png" alt="Foxtrot kick off 2025" width="375" height="282">
-				<button class="play-button" aria-label="Video afspelen">
-					<img src="images/icoon-playbutton.svg">
-				</button>
-    			<button class="info-button" aria-label="Meer informatie over deze video">
-      				<img src="images/icoon-info.svg" alt="informatie icoon">
-				</button>
-				<h3 class="video-caption">
-					<span>Optreden Foxtrot | Musical </span> 
-					<span>Awards: The Kick-Off 2025</span>
-				</h3>
-			</figure>
-		</article>
-
-		<a href="#">
-			Toon meer
-			<img src="images/icoon-dropdown.svg" alt="zwarte pijl naar rechts" aria-hidden="true">
-		</a>
-
-		<a href="#">
-			Bekijk meer
-			<img src="images/icoon-pijl-wit.svg" alt="zwarte pijl naar rechts" aria-hidden="true">
-		</a>
-	</section>
-
-	<section class="rating">
-		<h3>
-			Wat vinden andere bezoekers van DeLaMar
-		</h3>
-
-		<div> 
-			<figure >
-				<figcaption>
-				  4,3/5
-				</figcaption>
-			
-				<p aria-label="Beoordeling: 4,3 van 5 sterren">
-					<img src="images/homepage/full-star-rating.svg" alt="ster">
-					<img src="images/homepage/full-star-rating.svg" alt="ster">
-					<img src="images/homepage/full-star-rating.svg" alt="ster">
-					<img src="images/homepage/full-star-rating.svg" alt="ster">
-					<img src="images/homepage/half-star-rating.svg" alt="ster">
-				</p>
-			</figure>
-
-			<p>
-				uit <strong>15514 beoordelingen</strong> van onze bezoekers
-			</p>
-		</div>
-		
-			
-	</section>
-
-	<section class="social-media">
-		<div class="carrousel-foto">
-			<div class="foto-slide">
-				<img src="images/homepage/carrousel-1-mobile.jpg" alt="">
-				<img src="images/homepage/carrousel-2-mobile.jpg" alt="">
-				<img src="images/homepage/carrousel-3-mobile.jpg" alt="">
-				<img src="images/homepage/carrousel-4-mobile.jpg" alt="">
-				<img src="images/homepage/carrousel-5-mobile.jpg" alt="">
-				<img src="images/homepage/carrousel-6-mobile.jpg" alt="">
-			</div>
-			<div class="foto-slide">
-				<img src="images/homepage/carrousel-1-mobile.jpg" alt="">
-				<img src="images/homepage/carrousel-2-mobile.jpg" alt="">
-				<img src="images/homepage/carrousel-3-mobile.jpg" alt="">
-				<img src="images/homepage/carrousel-4-mobile.jpg" alt="">
-				<img src="images/homepage/carrousel-5-mobile.jpg" alt="">
-				<img src="images/homepage/carrousel-6-mobile.jpg" alt="">
-			</div>
-		</div>
-
-		<section>
-			<h2>
-				Volg ons op social media!
-			</h2>
 	
-			<figure>
-				<img src="images/icoon-facebook.svg" alt="Facebook logo">
-				<img src="images/icoon-instagram.svg" alt="Instagram logo">
-				<img src="images/icoon-youtube.svg" alt="Youtube logo">
-				<img src="images/icoon-tiktok.svg" alt="Tiktok logo">
-			</figure>
-		</section>
-		
-	</section>
-
-	<section class="nieuwsbrief">
-		<h2>
-			<span>
-				Onze nieuwsbrief
-			</span> 
-			<span>
-				ontvangen?
-			</span>
-		</h2>
-		<p>
-			Twee keer per maand als eerste op de hoogte van nieuwe voorstellingen en aanbiedingen?
-		</p>
-
-		<form>
-			<input type = "email" placeholder="Je e-mailadres" >
-			<input type="submit" value="Inschrijven">
-		</form>
-		<small>
-			lees onze
-			<a href="#">
-				privacy- en cookieverklaring
-			</a>
-		</small>
-	</section>
 
 	<footer>
+		
 		<section>
-			<p>
-				Marnixstraat 402
-
-				<a href="#">
-					Mail ons
-				</a>
-				<a href="#">
-					Bel ons
-				</a>
+			<h4>
+				Contactgegevens
+			</h4>
+				<address>
+					Marnixstraat 402<br>
+					<a href="mailto:info@delamar.nl">Mail ons</a><br>
+					<a href="tel:0201234567">Bel ons</a>
+				  </address>
 				<small>
 					van 11:00 tot 20:00 uur
 				</small>
-			</p>
 		</section>
 		
+		
+		<section class="desktop-handige-links">
+			<h4>
+				Handige Links
+			</h4>
+			<ul>
+				<li>
+					<a href="#">Bereikbaarheid</a>
+				</li>
+				<li>
+					<a href="#">Contact</a>
+				</li>
+				<li>
+					<a href="#">Veelgestelde vragen</a>
+				</li>
+				<li>
+					<a href="#">Inloggen</a>
+				</li>
+				<li>
+					<a href="#">Technische gegevens</a>
+				</li>
+			</ul>
+
+		</section>
+			
+
+		<section class="desktop-zakelijk-verhuur">
+			<h4>
+				Zakelijk verhuur
+			</h4>
+			<ul>
+				<li>
+					<a href="#">Bereikbaarheid</a>
+				</li>
+				<li>
+					<a href="#">Contact</a>
+				</li>
+				<li>
+					<a href="#">Ruimtes</a>
+				</li>
+				<li>
+					<a href="#">Mogelijkheden</a>
+				</li>
+				<li>
+					<a href="#">Faciliteiten</a>
+				</li>
+			</ul>
+		</section>
 
 		<details>
 			<summary>
 				Handige links
-				<img src="images/icoon-dropdown.svg" alt="dropdown icoon">
+				<img loading="lazy" src="images/icoon-dropdown.svg" alt="" aria-hidden="true">
 			</summary>
 			<ul>
 				<li>
@@ -413,7 +606,7 @@
 					<a href="#">Veelgestelde vragen</a>
 				</li>
 				<li>
-					<a href="#" target="_blank" rel="noopener">Inloggen</a>
+					<a href="#">Inloggen</a>
 				</li>
 				<li>
 					<a href="#">Technische gegevens</a>
@@ -424,7 +617,7 @@
 		<details>
 			<summary>
 				Zakelijk verhuur
-				<img src="images/icoon-dropdown.svg" alt="dropdown icoon">
+				<img loading="lazy" src="images/icoon-dropdown.svg" alt="" aria-hidden="true">
 			</summary>
 			<ul>
 				<li>
@@ -443,19 +636,19 @@
 					<a href="#">Faciliteiten</a>
 				</li>
 			</ul>
-
 		</details>
 
+	
 		<section>
-			<img src="images/delamar-logo.svg" alt="delamar logo">
+			<img loading="lazy" src="images/delamar-logo.svg" alt="DeLaMar logo">
 			<p> 
 				DeLaMar is een initiatief van de VandenEnde Foundation
 			</p>
 		</section>
 
 		<section>
-			<img src="images/privacy-verified.png" alt=" privacy verified logo">
-			<img src="images/green-key-logo-goud.jpg" alt=" green key logo">
+			<img loading="lazy" src="images/privacy-verified.png" alt=" Privacy verified">
+			<img loading="lazy" src="images/green-key-logo-goud.jpg" alt=" Green key">
 		</section>
 
 		<section>
@@ -463,29 +656,27 @@
 				veilig betalen met
 			</p>
 			<section class="betaling-opties">
-				<img src="images/logo-ideal.svg" alt="ideal logo">
-				<img src="images/logo-mastercard.svg" alt="mastercard logo">
-				<img src="images/logo-visa.svg" alt="visa logo">
-				<img src="images/logo-mastercard.svg" alt="mastercard logo">
-				<img src="images/logo-podiumcadeaukaart.svg" height="28" alt="podium cadeaukaart logo">
-				<img src="images/logo-apple-pay.svg" height="28" alt="apple pay logo">
-				<img src="images/logo-kunstcultuurcadeaukaart.webp" alt="kunst cultuur cadeaukaart logo">
-				<img src="images/delamar-cadeaukaart.png" alt="Delamar cadeaukart logo">
+				<img loading="lazy" src="images/logo-ideal.svg" alt="Ideal">
+				<img loading="lazy" src="images/logo-mastercard.svg" alt="Mastercard">
+				<img loading="lazy" src="images/logo-visa.svg" alt="Visa">
+				<img loading="lazy" src="images/logo-mastercard.svg" alt="Mastercard">
+				<img loading="lazy" src="images/logo-podiumcadeaukaart.svg" height="28" alt="Podium cadeaukaart">
+				<img loading="lazy" src="images/logo-apple-pay.svg" height="28" alt="Apple Pay">
+				<img loading="lazy" src="images/logo-kunstcultuurcadeaukaart.webp" alt="Kunst cultuur cadeaukaart">
+				<img loading="lazy" src="images/delamar-cadeaukaart.png" alt="DeLaMar cadeaukaart">
 			</section>
 		</section>
 		
 		<section>
-			<nav>
 				<a href="#">
-					Privacy- en cookieverklaring
+					Privacy- en cookieverklaring |
 				</a>
 				<a href="#">
-					Disclaimer
+					Disclaimer |
 				</a>
 				<a href="#">
 					Voorwaarden				
 				</a>
-			</nav>
 		</section>
 		
 	</footer>
