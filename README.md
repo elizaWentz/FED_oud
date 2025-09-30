@@ -253,20 +253,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-   <img src="readme-images/thuis-delamar" width="375px" alt="uitomst opdracht 1">
-    <img src="readme-images/zakelijk-delamar" width="375px" alt="uitomst opdracht 1">
+   <img src="readme-images/thuis-delamar.png" width="375px" alt="uitomst opdracht 1">
+    <img src="readme-images/zakelijk-delamar.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Heel veel is uiteindelijk wel gelukt zoals ik wou, waar ik het meest trots op ben is de automatische carousel die je als eerste ziet als je de pagina opent. Ik heb nog nooit eerder zoiets gemaakt en dacht ook dat het zeker niet zo goed zou lukken, daarom ben ik er extra trots op dat het is gelukt!
 
-  <img src="readme-images/carousel" width="375px" alt="top">
+  <img src="readme-images/carousel.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Op de echte DeLaMar website was er een video sectie waar je wanneer je op de video klikte, er een overlay opende en de video leit afspelen. Ik heb vanalles geprobeerd, maar het lukte maar niet. Ik zocht naar alternatieven zoals een youtbe video embedden en dan een eigen playbutton etc. als over lay erop te doen, maar dit werkte helaas ook allemaal niet. Ik heb uiteindelijk gewoon een foto gebruikt met icoontjes als overlay.
 
-  <img src="readme-images/video-overlay" width="375px" alt="bummer">
+  <img src="readme-images/video-overlay.png" width="375px" alt="bummer">
 </details>
 
 
