@@ -11,7 +11,9 @@
 }
 
 html{
+  display:block;
   font-size:16px;
+  overflow-x: hidden;
 }
 
 /*********************/
@@ -19,21 +21,20 @@ html{
 /*********************/
 :root {
 	/* startje */
-	--text-black:#111;
+	--text-black:#000;
   --text-white:  #fff;
   --white: #fff;
   --grey-light: #eeeeee;
   --grey-dark: #9b9b9b;
-  --black:#111;
+  --black:#000;
+  --black-30:rgba(0, 0, 0, .3);
   --gradient1: linear-gradient(-45deg, #ff8001 -1.08%, #f80080 46.24%, #661f80 101%);
   --gradient2: linear-gradient(-45deg, #ffe000 -2.05%, #ff8001 49.66%, #f80080 103.56%);
   --gradient3: linear-gradient(-45deg, #e71f80 -0.84%, #86368c 48.07%, #009fe3 101.23%);
   --gradient4: linear-gradient(-45deg, #a2c617 -0.81%, #00A97d 48.85%, #009fe3 100.62%);
-}
-
-
-html{
-  display:block;
+  --paars:#86368c;
+  --oranje: #ff8001;
+  --roze: #f80080;
 }
 
 body{
@@ -41,7 +42,7 @@ body{
 	background-color: var(--white);
   font-family: "Montserrat";
   line-height: 2em;
-  
+  overflow-x: hidden; 
 }
 
 @font-face
@@ -55,20 +56,133 @@ body{
     src: url('../css/fonts/Coco-Sharp-L-Extrabold.woff2');
 }
 
-header{
+
+/****************************************************************/
+/* focus + hover states  */
+/****************************************************************/
+:focus-visible {
+  outline: 3px solid #009fe3; /* zichtbaar focus-indicator */
+}
+
+/****************************************************************/
+/* thuispagina styling */
+/****************************************************************/
+header {
   height: 4.2rem;
-  background-color:var(--black);
   top: 0;
   left: 0;
   width: 100%;
+  position: fixed;
+  z-index: 10;
+
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  position: fixed;
-  z-index: 10;
-  width: 100%;
-  
 
+  background-color: var(--black);
+}
+
+
+.desktop-nav,.desktop-extra-nav {
+  display: none;
+}
+
+
+
+
+/* === .hamburger === */
+/* code Bron: https://codepen.io/elizaWentz/pen/JoGYBEr */
+nav:not(.desktop-nav) {
+  position:fixed;
+  left:0;
+  right:0;
+  top:4em;
+  bottom:0;
+  translate:100% 0%;
+  transition:translate .3s;
+  Background-color: var(--white);
+}
+
+/* nav: not(.desktop-nav) selecteerd alle nav behalve .desktop-nav) 
+bron: https://www.a11yproject.com/posts/how-to-hide-content/ */
+nav:not(.desktop-nav) ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* -n+2 selecteerd eerste twee kinderen van nav:not(.desktop-nav)
+bron: https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
+nav:not(.desktop-nav) ul li:nth-child(-n+2) {
+  padding: 1.5em 1em;
+
+  background-image: var(--gradient2);
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.zakelijk nav:not(.desktop-nav) ul li:nth-child(-n+3) {
+  padding: 1.5em 1em;
+
+  background-image: var(--gradient2);
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+
+  font-size: 1.3em;
+  font-weight: bold;
+  
+  
+}
+
+nav:not(.desktop-nav) ul li:nth-child(-n+2) a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--text-white);
+  text-decoration: none;
+}
+
+.zakelijk nav:not(.desktop-nav) ul li:nth-child(-n+3) a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--text-white);
+  text-decoration: none;
+}
+
+/* n+3 selecteerd 3e kind en alles daarna van nav:not(.desktop-nav) 
+bron: https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
+nav:not(.desktop-nav) ul li:nth-child(n+3) {
+  padding: 1.5em 1em;
+
+  background-color: var(--text-white);
+  border-bottom: 1px solid #ddd;
+
+  font-size: 1em;
+  font-weight: bold;
+}
+
+nav:not(.desktop-nav) ul li:nth-child(n+3) a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--text-black);
+  text-decoration: none;
+}
+
+/* Icons (pijlen, plusjes etc.) */
+nav:not(.desktop-nav) ul li img {
+  width: 1em;
+  height: 1em;
+}
+
+
+nav:not(.desktop-nav).toonMenu {
+  translate:0% 0%;
 }
 
 header a{
@@ -77,69 +191,118 @@ header a{
   z-index: 10;
 }
 
+
 a{
+  font-size: 1em;
   text-decoration: none;
   color:var(--text-black);
-  font-size: 1em;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  font-weight: 400;
-  margin-right: 1em;
-}
-
-.main_navigation a img{
+header div a img,
+header div button img {
   width: 20px;
 }
 
-.main_navigation{
-  display:flex;
+header div {
+  margin-right: 1em;
+
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
   list-style: none;
   gap: 1em;
-  align-items: center;
 
+  font-weight: 400;
 }
 
-.main_navigation li a, .zaal-iconen li{
-  color:var(--text-white);
-  font-weight: 100;
-  font-size: 0.6rem;
-  text-transform:uppercase;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+header div a,
+.zaal-iconen li {
   padding-top: 1em;
   gap: 0;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 0.6rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-white);
 }
 
-@media (max-width:38em) {header  a img{
-  width: 76px;
-}}
+header div button {
+  padding-top: 1.7em;
+  padding-left: 1em;
+  line-height: 3.2;
 
-main figure img {
-  padding-top: 3em;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 0.6rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-white);
+}
+
+/* === .uitgelicht === */
+/* bron: https://www.a11yproject.com/posts/how-to-hide-content/ */
+h1, .visually-hidden{
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.uitgelicht figure img {
   width: 100%;
   height: auto;
   display: block;
 }
 
 /* bron: ChatGPT */
-
-#zoom-afbeelding{
+.zoom-afbeelding{
   overflow: hidden;
+  width: 100%;      /* of vaste breedte zoals 345px */
+  height: auto;     /* of vaste hoogte als je dat wilt */
+  display: block;
+  position: relative;
 }
 
-#zoom-afbeelding img {
+.zoom-afbeelding picture {
+  width: 100%;
+  height: auto;
+  display: block;
   transition: transform 5s ease;
+  transform-origin: center center;  /*checken*/
+  animation: zoomIn 5s infinite alternate;
 }
 
-#zoom-afbeelding:hover img {
-  transform: scale(1.1);
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@media (hover: hover) {
+  .zoom-wrapper:hover picture {
+    transform: scale(1.1);
+  }
 }
 
 .slideshow-container {
@@ -151,213 +314,213 @@ main figure img {
 .slideshow-text {
   position: absolute;
   bottom: 1rem;
+  padding: 0 0.5em;
   left: 50%;
   transform: translateX(-50%);
+
   background-color: var(--white);
-  color: #e71f80;
-  padding: 0 0.5em;
+  
   font-size: 1rem;
   font-weight: bold;
+  color: var(--roze);
 }
 
-main section{
+.uitgelicht section{
   height: 300px;
   padding: 3rem 1.5rem 5rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1em;
 
-  background-color: #e71f80;
+  background-color: var(--roze);
   background-image: var(--gradient1);
 }
 
-main section h2{
-  font-size: 1.5em;
+
+.uitgelicht section h2{
+  margin: 0;
   padding: 0 0.4em;
-  color: #e71f80;
+ 
   background-color: var(--white);
+
+  font-size: 1.5em;
+  color: var(--roze);
 }
 
-
-
-main section p{
+.uitgelicht section p{
+  margin-bottom: 1em;
   padding: 0 0.5em;
+
+  background-color: var(--white);
+
   font-weight: 800;
   font-size: 0.8em;
-  color: #e71f80;
-  background-color: var(--white);
+  color: var(--roze);
 }
 
+.uitgelicht a, .cabaret a, .zalen a, .referenties a{
+  padding: 0.4em 1em;
 
-
-.zakelijk main section p,.zakelijk main small, .referenties small {
-  background-color: transparent;
-  color: var(--text-white);
-  font-weight: 400;
-  text-align: center;
-  line-height: 1.5em;
-}
-
-.zakelijk main small{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-
-
-.zakelijk main small a{
-  border:none;
-  background: none;
-
-
-}
-
-main a, .cabaret a, .zalen a, .referenties a{
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5em;
-  padding: 0.4em 1em;
+  
 
-  border: 2px solid black;
+  border: 2px solid var(--black);
   background-color: var(--black);
+  border-radius: 0.4em;
+  
   color: var(--text-white);
   text-decoration: none;
-
   font-weight: 700;
-  border-radius: 0.4em;
+
   cursor: pointer;
+
+  transition: gap 0.3s ease;
 }
 
+.uitgelicht {
+  position: relative;
+}
 
+.carousel-dots {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
 
-.zoek{
+  display: flex;
+  gap: 0.5em;
+}
+
+.carousel-dots .dot {
+  width: 30px;
+  height: 6px;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 3px;
+  
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+}
+
+.carousel-dots .dot.active {
   background-color: var(--white);
+}
+
+.carousel-slides li{
+  display: none;
+}
+
+.carousel-slides li:first-child {
+  display: block;
+}
+
+/* === .zoek === */
+.zoek{
+  padding:1em 0;
+
   display:flex;
   justify-content: center;
   flex-direction: column;
-  padding:1em 0;
 }
 
 .zoek form{
   position: relative;
-  width: 100%;
-  max-width: 375px;
   margin: 1rem auto;
+  padding: 1em 0 1em 0.5em;
+  width: 100%;
+  min-width: 375px;
 }
 
 .zoek input{
-  background-color: var(--grey-light);
-  border: none;
-  width: 330px;
-  font-size: 1em;
-  line-height: 1.8rem;
-  border-radius: 0.2em;
   padding: 0.7rem 0.7rem 0.7rem;
   margin: 0 1em;
+  width: 330px;
+
+  border-radius: 0.3em;
+  background-color: var(--grey-light);
+  border: none;
+
+  font-size: 1em;
+  line-height: 1.8rem;
 }
 
 .zoek img{
   position: absolute;
+  width: 1.2rem;
   right: 2rem;
   top: 50%;
   transform: translateY(-50%);
-  width: 1.2rem;
+  
   pointer-events: none;
 }
+
 .zoek h3{
-  font-size: 1.3em;
   margin: 0.3em 1em;
+  font-size: 1.3em;
 }
 
 .zoek ul{
   margin-top: 0.4em;
   margin-left: 1em;
+  overflow-x: auto; /* Voegt alleen een scrollbar toe als het nodig is */
+
   display: flex;
   flex-direction: row;
   gap: 0.5em;
-  list-style: none;
-  overflow-x: auto;
+  list-style: none; 
 }
 
 .zoek button{
   padding: 0.4em;
   margin-bottom: 1em;
+
+  background-color: var(--paars);
+  border-radius: 0.3em;
+
   font-size: 1em;
   font-weight:bold;
-  background-color: #661f80;
   color: var(--text-white);
-  border-radius: 0.3em;
-  border: none;
 }
 
-.voorstellingen, .zalen, .we-bieden, .mogelijkheden, .referenties, .referenties li{
+/* === .voorstellingen === */
+.voorstellingen, .zalen, .we-bieden, .mogelijkheden, .referenties{
+  padding: 2em 0;
+
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 2em 0;
 }
-
-.zalen{
-  padding: 2em 1em 1em 1em;
-}
-
 
 .voorstellingen ul{
-  list-style: none;
+  margin: 1em;
+
   display: flex;
   flex-direction: row;
   gap: 0.5em;
-  margin: 1em;
-}
-
-.we-bieden{
-  background-color: var(--grey-light);
-}
-
-.zaal-iconen, .voorzieningen-lijst, .we-bieden ul{
-  gap: 1em;
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  margin: 1em;
-  padding-bottom: 1.5em; 
-}
-
-
-
-.voorzieningen-lijst {
+ 
   list-style: none;
 }
-
-/* bron: StackOverflow.com */
-.voorzieningen-lijst li:before {
-  content: '✓';
-  color: #7ED321;
-}
-
-.zalen .voorzieningen-lijst{
-  display: flex;
-  flex-direction: column;
-}
-
-.voorzieningen-lijst{
-  gap: 0.5em;
-}
-
 
 .filter-button {
+  padding: 0.4em 1em;
+
   background-color: transparent;
   border: 2px solid;
-  color: var(--text-black);
-  padding: 0.4em 1em;
   border-radius: 0.3em;
+
   font-size: 1em;
   font-weight: 600;
+  color: var(--text-black);
+
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
@@ -370,6 +533,9 @@ main a, .cabaret a, .zalen a, .referenties a{
 .voorstellingen{
   background-color: var(--grey-light);
 }
+.voorstellingen article{
+  background-color:var(--white);
+}
 
 .voorstellingen article img{
   width:343px;
@@ -377,90 +543,38 @@ main a, .cabaret a, .zalen a, .referenties a{
 }
 
 .voorstellingen article, .cabaret{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 1em;
-  align-items: center;
-  background-color:var(--white);
   height:auto;
-}
 
-.zalen-article{
   display: flex;
-  justify-content: flex-start;
   flex-direction: column;
+  align-items: center;
   gap: 1em;
-  align-items: flex-start;
-  height: auto;
+
+  
+
 }
 
 .voorstellingen article, .zalen article{
   margin-bottom: 0.7em;
 }
 
-
-/*checken met border image slice */
-.zaal-inhoud{
-  border: 5px solid transparent;
-  border-image: var(--gradient3);
-  border-image-slice: 1;
-  overflow: hidden;
-  max-width: 360px;
-  margin: 1em 1em;
-  display: flex;
-  flex-direction: column;
-  font-size: 0.9em;
-}
-
-.zaal-inhoud h3{
-  font-size: 1.4em;
-  padding: 0.5em 0.5em;
-}
-.zaal-inhoud p{
-  font-size: 1em;
-  padding: 0 1em;
-}
-
-
 article h3{
   color: var(--text-white);
   padding: 0.2em;
-}
-
-.zalen article h3{
-  color: var(--text-blackwhite);
-}
-
-.zaal-iconen li{
-  color: var(--text-black);
-  font-weight: 600;
-  gap: 0.5em;
-  background-color: var(--grey-light);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-}
-
-.zaal-inhoud a{
-  margin: 1em;
-  font-size: 1.1em;
-}
-
-.zalen>a{
-  margin:0.5em;
 }
 
 article p{
   font-size: 0.8em;
 }
 
-article time{
+article small{
+  margin-bottom: 2em;
+  padding: 0.5em;
+
+  background-color: var(--grey-light);
+
   font-size: 0.8em;
   font-weight: 700;
-  background-color: var(--grey-light);
-  padding: 0.5em;
-  margin-bottom: 2em;
 }
 
 .malle-babbe h3{
@@ -469,60 +583,47 @@ article time{
 .malle-babbe img{
   background-image: var(--gradient1);
 }
-
-.malle-babbe time{
-  color: #f80080;
+.malle-babbe small{
+  color: var(--roze);
 }
 
-.plien-bianca img{
-  background-image: var(--gradient2);
-}
 .plien-bianca h3{
   background-image: var(--gradient2);
 }
-.plien-bianca time{
-  color: #ff8001;
+.plien-bianca img{
+  background-image: var(--gradient2);
 }
-
-.laan-woe img{
-  background-image: var(--gradient3);
+.plien-bianca small{
+  color: var(--oranje);
 }
 
 .laan-woe h3{
   background-image: var(--gradient3);
 }
-
-.laan-woe{
-  color: #86368c;
+.laan-woe img{
+  background-image: var(--gradient3);
 }
-
-.voorstellingen a{
-  margin-top: 1em;
-  font-weight: 700;
-  font-size: 0.9em;
+.laan-woe small{
+  color: var(--paars);
 }
 
 .voorstellingen .slideshow-text{
   padding: 0 0.6em;
   margin-bottom: 0.6em;
+
   font-size: 0.7em;
   font-weight: 800;
 }
 
+/* === .cabaret === */
 .cabaret{
-  padding: 3em 0.9em;
+  padding: 3em 1em;
 }
 
-.cabaret>img:first-of-type{
-  width:343px;
-  border: 4px solid transparent; /* nodig voor border-image */
-  background-image: var(--gradient3);
+.cabaret h2{
+  text-align: left;
 }
 
-.cabaret h3{
-  font-weight: 750;
-  font-size: 1.2em;
-}
 .cabaret p{
   font-weight: 350;
   font-size: 0.9em;
@@ -531,31 +632,42 @@ article time{
 .cabaret a, .zalen>a{
   padding: 0.75em 1em;
   background-color: transparent;
-  color: var(--text-black);
   border-radius: 0.3em;
+
+  color: var(--text-black);
 }
 
 .cabaret a{
-  width: 343px;
-
+  width: 95%;
+  margin-top: 1em;
 }
 
+/* === .achter-de-schermen === */
 .achter-de-schermen{
+  padding-top: 2.5em;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1.5em;
+
   background-color: var(--black);
   color: var(--text-white);
-  padding-top: 2.5em;
-  gap: 1.5em;
+}
+.achter-de-schermen-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .video-placeholder {
   position: relative;
   width: 100%;
-  cursor: pointer;
+
   display: flex;
   flex-direction: column;
+
+  cursor: pointer;
 }
 
 
@@ -572,20 +684,23 @@ article time{
   left: 50%;
   width: 60px;
   transform: translate(-50%, -50%);
+  z-index: 2;
+
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 2;
+ 
 }
 
 .info-button {
   position: absolute;
   top: 0.5em;
   right: 0.5em;
+  z-index: 2;
+
   background: transparent;
   border: none;
   cursor: pointer;
-  z-index: 2;
 }
 
 .video-placeholder iframe {
@@ -597,12 +712,13 @@ article time{
 .video-caption {
   position: absolute;
   margin-left: 0.5em;
+  padding-left: 0.5em;
   bottom: 0.8em;
+  z-index: 2;
+
   display: flex;
   flex-direction: column;
   gap: 0.3em;
-  z-index: 2;
-  padding-left: 0.5em
 }
 
 .video-caption span {
@@ -613,31 +729,36 @@ article time{
 .achter-de-schermen a{
   color: var(--text-white);
 }
+.achter-de-schermen a:last-child, .voorstellingen a{
+  padding-bottom: 0.5em;
 
-.achter-de-schermen a:last-child{
-  font-weight: 600;
   display: flex;
   flex-direction: row;
   gap: 1em;
+
+  font-weight: 600;
+  transition: gap 0.3s ease;
 }
 
+/* === .rating === */
 .rating, .social-media, .nieuwsbrief, footer {
+  padding: 2em 1em;
+
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 2em 1em;
 }
 
 .rating h3 {
+  margin-bottom: 1.5em;
   font-size: 1.4em;
   font-weight: 800;
-  margin-bottom: 1.5em;
 }
 
 .rating div {
-  background-color: var(--grey-light);
   padding: 1em;
   gap: 0.7em;
+  background-color: var(--grey-light);
 }
 
 .rating div figure, .social-media figure {
@@ -647,11 +768,11 @@ article time{
   justify-content: center;
   gap: 0.6em;
 }
+
 .rating div figcaption {
   font-size: 1.8em;
   font-weight: 800;
 }
-
 
 .rating div p:first-child{
   display: flex;
@@ -672,239 +793,38 @@ article time{
   font-weight: 800;
 }
 
-/* OVERIG ZAKELIJK PAGINA*/
-
-
-.zalen h2, .mogelijkheden h2, .referenties h2, .partners h2{
-  text-align: center;
-  align-items: center;
-  font-size: 1.7em;
-  margin: 1em 0 1em 0;
-}
-.zalen>p, .mogelijkheden>p, .partners>p{
-  text-align: center;
-  font-size: 0.9em;
-  padding: 0 0.7em 1.5em 0.7em;
-}
-
-.zakelijk>figure {
-  max-width: 345px; /* mobiel breedte */
-  margin: 5em auto 2em auto;
-  box-sizing: border-box;
-}
-
-.zakelijk>figure iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: none;
-}
-
-@media (min-width: 768px) {
-  .zakelijk>figure {
-    max-width: 900px;
-  }
-}
-
-.we-bieden{
-  padding-top: 5em;
-}
-.we-bieden li{
-  font-size: 1em;
-}
-.we-bieden li p{
-  font-size: 0.9em;
-  font-weight: 400;
-}
-
-.mogelijkheden-opties{
-  display: flex;
-  flex-wrap: wrap;
-  line-height: 0;
-}
-
-.mogelijkheden-opties li{
-  width: 50%;
-  list-style: none;
-}
-.mogelijkheden-opties a, .partners a{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.partners a{
-  color:#661f80;
-}
-.mogelijkheden-opties a>img{
-  width: 100%;
-  height: auto;
-  filter: brightness(70%);
-}
-
-.mogelijkheden-opties h3{
-  position: absolute;
-  color: var(--white);
-  z-index: 1;
-}
-
-
-.referenties li>img:first-of-type{
-  width: 15em;
-  height: 15em;
-  padding: 0.2em;
-  border-radius: 50%;
-  background-image: var(--gradient1);
-  margin-bottom: 2em;
-}
-
-.referenties li p{
-  font-size: 1.2em;
-  padding: 3em 3em 0 3em;
-  font-weight: 400;
-  font-style: italic;
-  text-align: center;
-}
-
-.referenties small {
-  color: var(--text-black);
-  font-weight: 700;
-  padding: 3em;
-}
-
-
-.slider-container {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
-  overflow: hidden;
-}
-
-.slider {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  height: 100%;
-}
-
-.slider li {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.slider li.active {
-  opacity: 1;
-  visibility: visible;
-  position: relative;
-}
-✅ Pijltjes-styling
-css
-Copy code
-.slider-container button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  font-size: 2rem;
-  padding: 0.2em 0.5em;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.slider-container .prev {
-  left: 0.5em;
-}
-
-.slider-container .next {
-  right: 0.5em;
-}
-
-.slider-container button:hover {
-  background: rgba(0, 0, 0, 0.7);
-}
-
-/* bron: Chatgpt */
-.logo-partners {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2em 0;
-  justify-items: center;
-  margin: 4em 0 2em 0;
-}
-
-.logo-partners img {
-  max-height: 60px;
-  max-width: 120px;
-  object-fit: contain;
-  width: auto;
-  height: auto;
-}
-
-/* Laatste logo centreren bij 2 per rij */
-.logo-partners img:last-child:nth-child(2n + 1) {
-  grid-column: 1 / -1;
-  justify-self: center;
-}
-
-@media (min-width: 600px) {
-  .logo-partners {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* Laatste logo centreren bij 3 per rij */
-  .logo-partners img:last-child:nth-child(3n + 1) {
-    grid-column: 2 / 3;
-  }
-}
-
-
+/* === .social-media === */
 .social-media{
   position: relative;
-  background-color: var(--black);
-  color: var(--text-white);
   height: 100%;
   padding: 4em 0;
   overflow: hidden;
-}
 
-.zakelijk .social-media{
-  padding: 2.5em 0; 
+  background-color: var(--black);
+  color: var(--text-white);
 }
-
 .social-media figure img{
-  background-image: var(--gradient1);
-  padding: 0.5em;
   margin-top: 1em;
+  padding: 0.5em;
+
+  background-image: var(--gradient1);
   border-radius: 0.5em;
 }
-
-
 /* bron: Youtube */
 .carrousel-foto{
   position: absolute;
-  z-index: 0;
   overflow: hidden;
   white-space: nowrap;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 0;
 }
 
 .foto-slide{
-  filter: brightness(70%);
   display: inline-block;
+  filter: brightness(70%);
   animation: 30s slide infinite linear;
 }
 
@@ -920,37 +840,384 @@ Copy code
 
 .foto-slide img{
   height: 100%;
-  object-fit: cover;
   width: auto;
+  object-fit: cover;
 }
 
 .social-media h2,
 .social-media figure, .zakelijk .social-media img {
   position: relative;
-  z-index: 2;
+  z-index: 2; 
 }
+
+/****************************************************************/
+/* zakelijk styling */
+/****************************************************************/
+.zakelijk .uitgelicht section p,.zakelijk .uitgelicht small, .referenties small {
+  background-color: transparent;
+  color: var(--text-white);
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.zakelijk .uitgelicht small{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: -1em;
+}
+
+.zakelijk .uitgelicht small a{
+  border:none;
+  background: none;
+}
+h2{
+  margin: 0.5em 0;
+  align-items: center;
+
+  text-align: center;
+  font-size: 1.7em;
+}
+
+ /* === .zalen === */
+.zalen>p, .mogelijkheden>p, .partners>p{
+  padding: 0 0.7em 1.5em 0.7em;
+  text-align: center;
+  font-size: 0.9em;
+}
+.zalen{
+  padding: 2em 1em 1em 1em;
+}
+.zalen-article{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+/*checken met border image slice */
+.zaal-inhoud{
+  margin: 1em 1em;
+  max-width: 355px;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  border: 5px solid transparent;
+  border-image: var(--gradient3);
+  border-image-slice: 1;
+ 
+  font-size: 0.9em;
+}
+
+.zaal-inhoud p{
+  padding: 0 1em;
+  font-size: 1em;
+}
+.zaal-inhoud h3{
+  padding: 0.5em 0.5em;
+
+  font-size: 1.4em;
+  color: var(--text-black);
+}
+
+.zaal-iconen li{
+  width: 50px;
+  height: 50px;
+  gap: 0.5em;
+
+  background-color: var(--grey-light);
+  border-radius: 50%;
+
+  color: var(--text-black);
+  font-weight: 600;
+}
+
+.zaal-inhoud a{
+  margin: 1em;
+  font-size: 1.1em;
+}
+
+.zalen>a{
+  margin:0.5em;
+}
+
+.zaal-iconen, .voorzieningen-lijst, .we-bieden ul{
+  margin: 1em;
+  padding-bottom: 1.5em;
+
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  
+  list-style: none;
+}
+
+/* bron: StackOverflow.com */
+.voorzieningen-lijst li:before {
+  content: '✓';
+  color: #7ED321;
+}
+
+.zalen .voorzieningen-lijst{
+  display: flex;
+  flex-direction: column;
+}
+
+.voorzieningen-lijst{
+  gap: 0.5em;
+}
+
+/* === .youtube-video === */
+.youtube-video {
+  max-width: 345px; /* mobiel breedte */
+  margin: 5em auto 2em auto;
+
+  display: flex;
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+.youtube-video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+
+ /* === .we-bieden === */
+.we-bieden{
+  padding-top: 5em;
+  background-color: var(--grey-light);
+}
+
+.we-bieden li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  font-size: 1em;
+}
+
+.we-bieden li p{
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+/* === .mogelijkheden === */
+.mogelijkheden-opties{
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 0;
+}
+
+.mogelijkheden-opties h3{
+  position: absolute;
+  color: var(--text-white);
+  z-index: 1;
+}
+
+.mogelijkheden-opties a, .partners a{
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  overflow: hidden;
+}
+
+.mogelijkheden-opties a>picture{
+  width: 100%;
+  height: auto;
+
+  filter: brightness(70%);
+  transition: filter 0.3s ease;
+}
+
+.mogelijkheden-opties a:hover > picture {
+  filter: brightness(30%);
+}
+
+/* === .referenties === */
+.referenties div>img:first-of-type{
+  width: 15em;
+  height: 15em;
+  margin-bottom: 2em;
+  padding: 0.2em;
+
+  border-radius: 50%;
+  background-image: var(--gradient1);
+
+}
+
+.referenties li p{
+  font-size: 1.2em;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+}
+
+.referenties small {
+  padding: 3em;
+
+  color: var(--text-black);
+  font-weight: 700;
+}
+
+.referenties{
+  position: relative;
+}
+
+.referenties a{
+  max-width: 168px;
+}
+
+.referenties button {
+  width: 4em;
+  height: 4em;
+  position: absolute;
+  top: 30%;
+  z-index: 1; 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--black);
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.referenties button:first-of-type {
+  left: 0.5em;
+  transition: padding-right 0.3s ease;
+}
+
+/* Rechter knop */
+.referenties button:last-of-type {
+  right: 0.5em;
+  transition: padding-left 0.3s ease;
+}
+
+.referenties button img {
+  width: 1em;
+  height: 1em;
+  filter: brightness(100%);
+}
+
+.referenties{
+  padding: 2em 0 0 0;
+}
+
+.referenties ul, .we-bieden ul{
+  display:flex;
+  overflow:auto;
+  gap:1em;
+}
+
+.referenties ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-basis: 100%; /* elk item 100% breed*/
+  flex-shrink: 0; /*zorgt ervoor dat het niet krimpt */
+}
+
+.referenties div section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === .partners === */
+.partners p {
+  margin: 0 auto 1em auto;
+  text-align: center;
+}
+
+.partners a{
+  color: var(--paars);
+}
+
+/* bron: Chatgpt */
+.logo-partners {
+  margin: 4em 0 2em 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em 0;
+  justify-items: center;
+}
+
+.logo-partners img {
+  max-height: 60px;
+  max-width: 120px;
+  width: auto;
+  height: auto;
+}
+
+/* bron: Chatgpt */
+/* Laatste logo centreren bij 2 per rij */
+.logo-partners img:last-child:nth-child(2n + 1) {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+
+/* === .social-media === */
+
+.zakelijk .social-media{
+  padding: 2.5em 0; 
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.zakelijk .social-media> img{
+  padding: 2.5em 0; 
+  width: 30%;
+}
+
 
 .zakelijk .foto-slide img{
   height: 220px;
 }
 
 .nieuwsbrief{
-  background-color: var(--black);
-  color: var(--white);
   gap: 0.9em;
+  background-color: var(--black);
+  color: var(--text-white);
 }
 
 .nieuwsbrief p{
+  padding-bottom: 1em;
   font-size: 0.9em;
   line-height: 1.2em;
 }
 
+.nieuwsbrief h2{
+  font-size: 1.4em;
+}
 .nieuwsbrief span {
   background: var(--gradient1);
   color: var(--text-white);
+  text-align: left;
 }
 
 .nieuwsbrief form{
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -958,16 +1225,18 @@ Copy code
 }
 
 .nieuwsbrief input{
+  padding: 0.7em 0.7rem 0.7rem;
+  width: 90%;
+
+  border: none;
+  border-radius: 0.2em;
+
   font-size: 1em;
   line-height: 1.8rem;
-  border-radius: 0.2em;
-  padding: 0.7em 0.7rem 0.7rem;
-  width: 100%;
-  border: none;
 }
 
-.nieuwsbrief input:first-child{
-  width: 210%;
+#email{
+  width: 250%;
   border-radius: 0;
 }
 .nieuwsbrief input:last-child{
@@ -987,21 +1256,25 @@ Copy code
 }
 
 footer {
+  width: 100%;
+
   background-image: var(--gradient1);
   color: var(--text-white);
-  width: 100%;
+}
+
+footer section:first-of-type {
+  padding-bottom: 3em;
 }
 
 footer section:first-of-type p{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 3em;
+  
 }
 
-footer details{
- width: 342px;
- border-bottom: black;
+footer address a{
+  font-weight: 700;
 }
 
 footer summary, .zaal-inhoud a{
@@ -1014,6 +1287,11 @@ footer summary, .zaal-inhoud a{
 footer summary img{
   width: 1.2em;
   height: auto;
+  transition: transform 0.3s ease;
+}
+
+details[open] summary img {
+  transform: rotate(180deg);
 }
 
 footer details ul{
@@ -1023,7 +1301,9 @@ footer details ul{
 }
 
 footer details{
+  width: 342px;
   padding: 1em 0.5em;
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.4); /* licht wit/transparant */
   font-weight: 600;
 }
@@ -1037,50 +1317,783 @@ footer section nav{
   flex-direction: column;
 }
 
-footer section:nth-of-type(2), footer section:nth-of-type(3){
+footer section:nth-of-type(4), footer section:nth-of-type(5){
+  margin: 2em 0;
+  padding: 1em;
+
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 2em;
+
   font-size: 0.7em;
   text-align: left;
   line-height: 1.5;
-  gap: 2em;
-  padding: 1em;
-  margin: 2em 0;
 }
 
-footer section:nth-of-type(3){
+footer section:nth-of-type(5){
+  padding: 3em 0;
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.4);
-  padding: 3em 0;
 }
-footer section:nth-of-type(3) img:last-child{
+footer section:nth-of-type(5) img:last-child{
   width: 20%;
 }
 
-footer section:nth-of-type(3) img:first-child{
+footer section:nth-of-type(5) img:first-child{
   width: 60%;
 }
 
 .betaling-opties{
+  width: 60%; 
+
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.1em;
   flex-wrap: wrap;
-  width: 60%; 
 }
 
-footer section:nth-of-type(4){
+footer section:nth-of-type(6){
+  margin: 2em 0;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.6em;
+
   font-weight: 600;
-  margin: 2em 0;
 }
+
+@media (max-width: 899px) {
+  .uitgelicht section p:first-child, .desktop-handige-links,
+  .desktop-zakelijk-verhuur,footer section:first-of-type h4, .nieuwsbrief-left small{
+    display: none;
+  }
+
+  header a img{
+    width: 76px;
+  }
+
+  .uitgelicht figure img{
+    padding-top: 0;
+  }
+  
+  .zoek h2, .zoek-links h3 {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  .cabaret picture img:first-of-type{
+    background-image: var(--gradient3);
+    border: 4px solid transparent; 
+  }
+
+  .we-bieden ul, .referenties ul{
+    scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;
+    /* zodat je niet per ongeluk 'back' scrollt */
+    overscroll-behavior-x:contain;
+    scrollbar-width:thin;
+    scrollbar-color:var(--roze) transparent;  
+  }
+  .referenties li div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+  }
+
+  .we-bieden li{
+    flex-basis: 100%;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+  }
+
+  .mogelijkheden-opties li{
+    width: 50%;
+    list-style: none;
+  }
+
+  .referenties li p{
+    max-width: 370px;
+    padding: 3em 3em 0 3em;
+  }
+}
+
+
+/****************************************************************/
+/* desktop styling */
+/****************************************************************/
+@media (min-width: 900px){
+  /* === hover states === */
+  .zalen a:hover, .referenties a:hover{
+    gap: 0.8em;
+    opacity: 80%;
+  }
+
+  .uitgelicht a:hover, .cabaret a:hover, .zalen>a:hover{
+    gap: 0.8em;
+    background-color: var(--grey-light);
+  }
+
+  .achter-de-schermen a:last-child:hover, .voorstellingen a:hover{
+    gap: 1.3em;
+  }
+
+  .zoek button:hover{
+    background-color:#3b1f52;
+  }
+
+  .referenties button:first-of-type:hover{
+    padding-right: 0.5em;
+  }
+  .referenties button:last-of-type:hover{
+    padding-left: 0.5em;
+  }
+
+  /* === header === */
+  header > div:not(.desktop-extra-nav),
+  nav:not(.desktop-nav),.uitgelicht figcaption,.referenties div img:nth-of-type(2), .nieuwsbrief>small, footer details{
+    display: none;
+  }
+
+  header{
+    height: 6.5rem;
+    background-color: var(--black-30);
+    transition: background-color 0.3s ease;
+  }
+
+  header.scrolled {
+    background-color: var(--black); /* of een andere donkere kleur */
+    transition: background-color 0.3s ease;
+  }
+  
+  .desktop-nav {
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .desktop-nav ul {
+    margin: 0;
+    padding: 1em;
+
+    display: flex;
+    gap: 1em;
+    list-style: none;
+  }
+    
+  .desktop-nav li {
+    display: flex;
+    gap: 1em;
+  }
+  
+  .desktop-nav ul a {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+
+    font-weight: bold;
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .desktop-extra-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+  }
+  
+  .desktop-extra-nav ul {
+    padding-right: 2em;
+
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .desktop-extra-nav a{
+    padding-top: 0.5em;
+
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+
+    font-size: 0.8em;
+    text-transform:none;
+  }
+  
+  
+  .desktop-extra-nav button{
+    margin-top:1em;
+    padding: 0 0.5em;
+
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+
+    background-image: var(--gradient4);
+    border-radius: 0.7em;
+
+    font-size: 0.8em;
+    text-transform:none;
+    font-weight: 300;
+  }
+  
+  .desktop-extra-nav form{
+    position: relative;
+    width: 100%;
+    max-width: 375px;
+  }
+  
+  .desktop-extra-nav form input{
+    width: 330px;
+    margin: 0 1.5em 0.5em 1.5em;
+    padding: 0.5rem 0.5rem 0.5rem;
+   
+    
+    background-color: var(--white);
+    border: none;
+    border-radius: 0.2em;
+ 
+    font-size: 1em;
+    line-height: 1.8rem;
+  }
+  .desktop-extra-nav form img{
+    position: absolute;
+    transform: translateY(-50%);
+    width: 1.2rem;
+    right: 2em;
+    top: 50%;
+  }
+
+  /* === .uitgelicht === */
+  .carousel-slides li {
+    position: relative;
+  }
+
+  .uitgelicht section {
+    position: absolute;
+    top: 70%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 1.5rem;
+    max-width: 90%;
+    width: 100%;
+    box-sizing: border-box;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    
+    background: none;
+    gap: 1em;
+  }
+
+  .uitgelicht section h2 {
+    padding: 0.3em 0.6em;
+
+    background: var(--gradient1); 
+
+    color: var(--text-white);
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  .uitgelicht section p {
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+
+  .zakelijk .uitgelicht section p{
+    width: 70%;
+    padding: 0 0.5em;
+    background-color: var(--white);
+
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--roze);
+    text-align: left;
+  }
+  .uitgelicht small a{
+    color: var(--text-white);
+  }
+  
+  .uitgelicht a{
+    border: none;
+    background-color: var(--white);
+    color: var(--text-black);
+  }
+
+  .uitgelicht a img:not(.zakelijk small img){
+   filter: invert(100%);
+  }
+
+  .uitgelicht .carousel-dots{
+    left: 16%;
+    margin-bottom: 1em;
+  }
+
+  .zoom-afbeelding{
+    border: 8px solid transparent;
+    background-image: var(--gradient1);
+  }
+
+   /* === .zoek === */
+  .zoek h2 {
+    margin: 0 auto 1em;
+    padding: 0.4rem 1.5rem;
+
+    display: inline-block;
+
+    background: var(--gradient3);
+    font-size: 2.2rem;
+    color: var(--text-white);
+  }
+  .zoek {
+    padding: 2rem 1rem;
+  }
+
+  .zoek-wrapper {
+    margin: 0 3em ;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .zoek-links h3, .zoek-rechts h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  .zoek-rechts h3{
+    margin-left: 0;
+  }
+  
+  .zoek ul {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+  }
+  .zoek button {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .zoek button {
+    padding: 0.3em 0.4em;
+    
+    background-color: var(--paars);
+    border: none;
+    border-radius: 0.3em;
+
+    color: var(--text-white);
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+  }   
+
+  .zoek form {
+    position: relative;
+    width: 100%;
+    max-width: 540px;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5em;
+  }
+
+  .zoek input {
+    height: 4em;
+    padding: 1.5em 1.5em 1.5rem;  
+    width: 100%;
+    box-sizing: border-box;   /* voorkomt overflow */
+
+    border: none;
+    border-radius: 0.2em;
+    font-size: 1rem;
+  }
+
+  .zoek img {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    width: 1.2rem;
+    height: 1.2rem;
+    pointer-events: none;
+  }
+
+  /* === .zalen === */
+  .zaal-inhoud{
+    max-width: 100%;
+  }
+  .voorstellingen-wrapper, .achter-de-schermen-wrapper, .zalen-wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+  }
+
+  .zalen>p, .mogelijkheden>p, .partners>p{
+    width: 50em;
+  }
+
+  /* === .mogelijkheden === */
+  .mogelijkheden-opties{
+    width: 100%;;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 1.5em;
+  }
+
+  .mogelijkheden-opties li{
+    width: 33.3333333333%;
+    list-style: none;
+  }
+
+  .mogelijkheden-opties picture img {
+    width: 100%;
+    height: auto;
+    display: block; /* voorkomt extra witruimte onder img */
+    max-width: 100%;
+  }
+   /* === .referenties === */
+  .referenties li div{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+  }
+
+  .referenties li p{
+    padding: 1em 3em 0 3em;
+    max-width: 37em;
+  }
+
+  /* === .cabaret === */
+  .cabaret{
+    display: flex;
+    flex-direction: row;
+    padding: 3em 8em;
+
+  }
+  .cabaret article{
+    background-color: var(--white);
+    position: relative;
+    right: 2em;
+    border: 5px solid transparent;
+    border-image: var(--gradient3);
+    border-image-slice: 1;
+    padding: 2em 2em;
+  }
+
+  .cabaret>picture img{
+    border: none;
+  }
+
+  .cabaret h2{
+    font-size: 1.7em;
+  }
+
+  .cabaret a{
+    width: 50%;
+  }
+
+  /* === .rating === */
+  .rating{
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+  }
+
+  .rating h3{
+    width: 15em;
+  }
+
+  .zakelijk h2{
+    font-size: 2.5em;
+  }
+
+  .youtube-video{
+    max-width: 700px;
+  }
+
+  /* === .partners === */
+  .partners{
+    padding: 2em 10em;
+  }
+
+ .logo-partners {
+    display: grid;
+    grid-template-columns: repeat(4, auto); /* Strakker, smaller kolombreedtes */
+    margin: 2em 0;
+  }
+  
+  .logo-partners img {
+    max-height: 60px;
+    max-width: 120px;
+    width: auto;
+    height: auto;
+  }
+
+  /* === .social-media === */
+  .social-media{
+    padding: 7.5em 0;
+  }
+  .social-media h2{
+    font-size: 2em;
+  }
+ .social-media figure img{
+    border-radius: 0.2em;
+  }
+  .zakelijk .foto-slide img{
+    height: 348px;
+  }
+
+  /* === .nieuwsbrief === */
+  .nieuwsbrief h2{
+    text-align: left;
+  }
+  .nieuwsbrief{
+    padding: 4em 15em;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+  .nieuwsbrief-left{
+    width: 25em;
+    padding: 1em;
+  } 
+  .nieuwsbrief h2{
+    font-size: 2em;
+    line-height: 1.3;
+  }
+  .nieuwsbrief form {
+    max-width: 500px;
+    width: 100%;
+    justify-content: flex-start; 
+  }
+  .nieuwsbrief p{
+    max-width: 500px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  /* === footer === */
+  footer {
+    padding: 4em 8em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3em;
+    text-align: left;
+  }
+
+  footer ul {
+    list-style: none;
+
+  }
+  footer a {
+    color: var(--text-white);
+    font-weight: 200;
+    font-size: 0.9em;
+  }
+
+  footer a:hover,.partners a:hover {
+    text-decoration: underline;
+  }
+
+  footer section:nth-of-type(2),footer section:nth-of-type(3){
+    order:-1;
+  }
+  footer section:nth-of-type(4) p{
+    order:-1;
+    width: 10em;
+    font-size: 1.2em;
+    text-align: right;
+  }
+  footer section:nth-of-type(5){
+    order: 1;
+    padding: 0;
+    width: 30%;
+    margin: -1.5em;
+    border: none;
+  }
+
+  footer section:nth-of-type(6){
+    margin: 0;
+    margin-top: -1.5em;
+    align-items: flex-start;
+    justify-content:flex-start;
+  }
+
+  footer .betaling-opties{
+    justify-content:flex-start;
+    flex-wrap: nowrap;
+    padding: 0;
+  }
+
+  footer section:last-child {
+    order:1;
+    margin: -0.1em;
+    display: flex;
+    gap: 1em;
+    font-size: 0.8em;
+  }
+
+}
+
+.reduced-motion * {
+  animation: none !important;
+  transition: none !important;
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .zoom-afbeelding picture {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .carousel-slides li {
+    transition: none !important;
+  }
+  .foto-slide{
+    animation: none !important;
+  }
+
+  a{
+    transition: none !important;
+  }
+
+  .zalen a:hover, .referenties a:hover, .uitgelicht a:hover, .cabaret a:hover, .zalen>a:hover{
+    gap: 0.5em;
+  }
+  .achter-de-schermen a:last-child:hover, .voorstellingen a:hover{
+    gap: 1em;
+  }
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --text-black:#000;
+    --text-white:  #fff;
+    --white: #eeeeee;
+    --grey-light: #222222;
+    --grey-dark: #9b9b9b;
+    --black:#000;
+    --black-30:rgba(0, 0, 0, .3);
+    --gradient1: linear-gradient(-45deg, #b35600 -1.08%, #991c5e 46.24%, #3b1f52 101%);
+    --gradient2: linear-gradient(-45deg, #806600 -2.05%, #b35600 49.66%, #991c5e 103.56%);
+    --gradient3: linear-gradient(-45deg, #a0265c -0.84%, #5d2d65 48.07%, #005a8a 101.23%);
+    --gradient4: linear-gradient(-45deg, #5e7233 -0.81%, #006d5c 48.85%, #005a8a 100.62%);
+    --paars:#5d2d65;
+    --oranje: #b35600;
+    --roze: #991c5e;
+  }
+
+  .uitgelicht a:hover{
+    background-color: var(--grey-dark);
+  }
+
+  img{
+    filter: brightness(70%);
+  }
+  body, .voorstellingen article, .cabaret a, .zalen a, .referenties a {
+    background-color:var(--black);
+  }
+  .cabaret a, .zalen a, .referenties a{
+    border: 2px solid var(--white);
+  }
+  .zalen a img, .zaal-iconen li img, .voorstellingen a img, .cabaret a img{
+    filter:invert(100%);
+  }
+  .carousel-dots .dot.active, .achter-de-schermen, .partners {
+    background-color: var(--grey-light);
+  }
+  .zoek input, .filter-button.active, .zaal-inhoud a, article small {
+    background-color: var(--white);
+  }
+  .zaal-iconen, .voorzieningen-lijst, .we-bieden ul,  .filter-button, .zoek h3,  article p, .cabaret h3, .cabaret a, .zalen>a, .rating h3, .zalen h2, .mogelijkheden h2, .referenties h2, .partners h2, .we-bieden h2, .zalen>p, .mogelijkheden>p, .partners>p, .referenties small, .cabaret h2, .voorstellingen h2 {
+    color: var(--text-white);
+  }
+  .filter-button.active, .zaal-inhoud a {
+    color: var(--text-black);
+  }
+  .zalen p, .zaal-inhoud h3, .referenties li p{
+    color: var(--white);
+  }
+  .zaal-iconen li,  .rating div,   .referenties button{
+    background-color: var(--grey-dark);
+  }
+  .malle-babbe{
+    background-image:var(--gradient1);    
+  }
+  .malle-babbe h3,.laan-woe h3,.plien-bianca h3{
+    background-image: none;
+    background-color: var(--black);
+  }
+  .plien-bianca{
+    background-image:var(--gradient2);
+  }
+  .laan-woe{
+    background-image:var(--gradient3);
+  }
+  .voorstellingen a{
+    color:var(--text-white);
+  }
+  .cabaret a, .zalen>a{
+    border-color: var(--white);
+    background-color: transparent;
+  }
+
+  @media (min-width: 900px){
+    .cabaret article{
+      background-image: var(--gradient3);
+    }
+  }
+  .partners{
+    padding: 2em 0;
+  }
+  .partners p {
+    color:var(--text-white);
+  }
+}
+
+
+
 
 
 
