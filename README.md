@@ -193,11 +193,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  Bij de WCAG test kwam mijn website er wel goed uit. Er waren een paar dingen die een nee hebben gekregen, dit waren:
+  - foucus matched de visual layout, dit heb ik aangepast zodat het meer passend is.
+  - size rotated to any orientation, ik heb wel voor mobiel en desktop maar alles ertussen in is een nee,ik doe namelijk geen responsive.
+  - transcrips voor videos, nvt.
+  - provide een skip link, dit heb ik volgensmij niet en is misschien nog wel een interresantie om toe te voegen als ik tijd heb.
+  - identify links in new tab, nvt.
+  - high contrast mode, ik heb ervoor gekozen deze niet te maken omdat ik al een ligth dark mode en een reduced motion heb.
+  - increase text-size, is een goede om nog over na te denke om toe te voegen.
+
+    De rest heeft allemaal een ja gekregen, naar mijn mening is dat een vrij goed resultaat al voor mijn website. Ik zal er nog over nadenken welke van de dingen die ik nog niet heb zal toevoegen aan mijn website.
 
 </details>
-
-
 
 
 
@@ -246,19 +253,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+   <img src="readme-images/thuis-delamar" width="375px" alt="uitomst opdracht 1">
+    <img src="readme-images/zakelijk-delamar" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Heel veel is uiteindelijk wel gelukt zoals ik wou, waar ik het meest trots op ben is de automatische carousel die je als eerste ziet als je de pagina opent. Ik heb nog nooit eerder zoiets gemaakt en dacht ook dat het zeker niet zo goed zou lukken, daarom ben ik er extra trots op dat het is gelukt!
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/carousel" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Op de echte DeLaMar website was er een video sectie waar je wanneer je op de video klikte, er een overlay opende en de video leit afspelen. Ik heb vanalles geprobeerd, maar het lukte maar niet. Ik zocht naar alternatieven zoals een youtbe video embedden en dan een eigen playbutton etc. als over lay erop te doen, maar dit werkte helaas ook allemaal niet. Ik heb uiteindelijk gewoon een foto gebruikt met icoontjes als overlay.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/video-overlay" width="375px" alt="bummer">
 </details>
 
 
