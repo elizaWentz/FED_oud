@@ -1,8 +1,5 @@
 // JavaScript Document
 
-
-console.log("hi");
-
 //reduced motion
 const motionToggleButton = document.getElementById('toggle-motion');
 
